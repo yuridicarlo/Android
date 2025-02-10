@@ -2,6 +2,6 @@
     "java.configuration.updateBuildConfiguration": "interactive",
     "sonarlint.connectedMode.project": {
         "connectionId": "yuridicarlo",
-        "projectKey": "yuridicarlo_yooppie-app"
+        "projectKey": "yuridicarlo_Android"
     }
 }
