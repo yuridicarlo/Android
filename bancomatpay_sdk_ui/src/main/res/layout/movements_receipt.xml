@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/layout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        tools:context=".activities.TransactionReceiptActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size_20"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_12" />
+
+                <TextView
+                    android:id="@+id/transaction_receipt_title"
+                    style="@style/TransactionReceiptTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receipt_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_12" />
+
+                <it.bancomatpay.sdkui.widgets.ToolbarSimple
+                    android:id="@+id/toolbar_simple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:centerImg="@drawable/logo_bancomat_complete" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50" />
+
+                <RelativeLayout
+                    android:id="@+id/contact_consumer_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/contact_merchant_image_profile"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="@dimen/size_10" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@id/contact_merchant_image_profile"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_merchant_name"
+                            style="@style/TransactionReceiptName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLength="25"
+                            android:maxLines="1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_5" />
+
+                        <TextView
+                            android:id="@+id/text_merchant_address"
+                            style="@style/TransactionReceiptDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_65" />
+
+                <TextView
+                    android:id="@+id/transaction_detail_status_merchant"
+                    style="@style/TransactionDetailTextStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/p2b_transaction_detail_payment_success" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:id="@+id/transaction_detail_price_merchant"
+                    style="@style/TransactionDetailTextPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/transaction_fee_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/transaction_fee"
+                    style="@style/TransactionFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/transaction_detail_date_merchant"
+                    style="@style/TransactionDetailTextDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/size_20"
+                    android:paddingEnd="@dimen/size_25"
+                    android:paddingBottom="@dimen/size_20">
+
+
+                    <LinearLayout
+                        android:id="@+id/text_iban_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_iban_label_merchant"
+                            style="@style/TransactionDetailTextLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autoSizeMaxTextSize="13dp"
+                            android:autoSizeMinTextSize="7dp"
+                            android:autoSizeStepGranularity="2dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="@string/charge_to" />
+
+                        <TextView
+                            android:id="@+id/text_iban_merchant"
+                            style="@style/TransactionDetailTextValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:autoSizeMaxTextSize="16dp"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeStepGranularity="2dp"
+                            android:autoSizeTextType="uniform"
+                            android:ellipsize="end"
+                            android:maxLines="1" />
+
+                        <View
+                            android:id="@+id/line_iban"
+                            style="@style/LineG1"
+                            android:layout_marginTop="@dimen/size_15"
+                            android:layout_marginBottom="@dimen/size_15" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/transaction_id_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/transaction_id_label_merchant"
+                            style="@style/TransactionDetailTextLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autoSizeMaxTextSize="13dp"
+                            android:autoSizeMinTextSize="7dp"
+                            android:autoSizeStepGranularity="2dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="@string/transaction_id" />
+
+                        <TextView
+                            android:id="@+id/transaction_id_text_merchant"
+                            style="@style/TransactionDetailTextValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autoSizeMaxTextSize="16dp"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeStepGranularity="2dp"
+                            android:autoSizeTextType="uniform"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:ellipsize="end"
+                            android:maxLines="1" />
+
+                        <View
+                            android:id="@+id/transaction_id_line"
+                            style="@style/LineG1"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/size_15"
+                            android:layout_marginBottom="@dimen/size_15" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/transaction_cashback_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:paddingEnd="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/transaction_cashback_label"
+                            style="@style/TransactionDetailTextLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autoSizeMaxTextSize="13dp"
+                            android:autoSizeMinTextSize="7dp"
+                            android:autoSizeStepGranularity="2dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="@string/bpay_cashback_title" />
+
+                        <TextView
+                            android:id="@+id/transaction_cashback_text"
+                            style="@style/TransactionDetailTextValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:autoSizeMaxTextSize="16dp"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeStepGranularity="2dp"
+                            android:autoSizeTextType="uniform"
+                            android:ellipsize="end"
+                            android:maxLines="1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

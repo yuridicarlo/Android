@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="navigation_bar_height">48dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_vertical_margin">22dp</dimen>
+    <dimen name="payment_request_detail_element_margin_top">8dp</dimen>
+
+    <dimen name="toolbar_icon_padding">8dp</dimen>
+
+    <dimen name="home_sliding_panel_height">150dp</dimen>
+    <dimen name="home_fab_margin_bottom">110dp</dimen>
+    <dimen name="home_qr_code_label_margin_top">190dp</dimen>
+    <dimen name="home_qr_code_label_margin_top_restyle">110dp</dimen>
+    <dimen name="home_viewpager_item">200dp</dimen>
+    <dimen name="text_other_document_bottom_margin">5dp</dimen>
+
+    <dimen name="edit_text_causal_message_height">90dp</dimen>
+
+    <dimen name="contact_list_circle_placeholder">51dp</dimen>
+    <dimen name="map_list_circle_placeholder">41dp</dimen>
+
+    <dimen name="fragment_keyboard_height">225dp</dimen>
+
+    <dimen name="size_3">1dp</dimen>
+    <dimen name="size_5">3dp</dimen>
+    <dimen name="size_7">4dp</dimen>
+    <dimen name="size_8">6dp</dimen>
+    <dimen name="size_10">8dp</dimen>
+    <dimen name="size_12">10dp</dimen>
+    <dimen name="size_14">12dp</dimen>
+    <dimen name="size_15">13dp</dimen>
+    <dimen name="size_17">14dp</dimen>
+    <dimen name="size_20">16dp</dimen>
+    <dimen name="size_23">18dp</dimen>
+    <dimen name="size_24">19dp</dimen>
+    <dimen name="size_25">20dp</dimen>
+    <dimen name="size_27">22dp</dimen>
+    <dimen name="size_30">24dp</dimen>
+    <dimen name="size_33">26dp</dimen>
+    <dimen name="size_35">28dp</dimen>
+    <dimen name="size_38">30dp</dimen>
+    <dimen name="size_40">32dp</dimen>
+    <dimen name="size_43">34dp</dimen>
+    <dimen name="size_49">39dp</dimen>
+    <dimen name="size_50">40dp</dimen>
+    <dimen name="size_51">41dp</dimen>
+    <dimen name="size_55">45dp</dimen>
+    <dimen name="size_56">46dp</dimen>
+    <dimen name="size_60">50dp</dimen>
+    <dimen name="size_65">55dp</dimen>
+    <dimen name="size_66">56dp</dimen>
+    <dimen name="size_74">58dp</dimen>
+    <dimen name="size_76">60dp</dimen>
+    <dimen name="size_78">62dp</dimen>
+    <dimen name="size_87">70dp</dimen>
+    <dimen name="size_88">88dp</dimen>
+    <dimen name="size_95">76dp</dimen>
+    <dimen name="size_250">175dp</dimen>
+    <dimen name="size_460">400dp</dimen>
+    <dimen name="size_500">450dp</dimen>
+
+</resources>

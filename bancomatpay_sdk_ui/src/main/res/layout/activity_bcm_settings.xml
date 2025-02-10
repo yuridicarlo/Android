@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        tools:context=".activities.SettingsActivity">
+
+        <it.bancomatpay.sdkui.widgets.ToolbarSimple
+            android:id="@+id/toolbar_simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerImg="@drawable/empty"
+            app:leftImg="@drawable/back_blue" />
+
+        <TextView
+            style="@style/TextGenericTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_30" />
+
+        <ScrollView
+            android:id="@+id/scroll_view_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <it.bancomatpay.sdkui.widgets.SettingsSeparatorHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="@string/settings_separator_header_notifications" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextSettingsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size_20"
+                        android:layout_marginRight="@dimen/size_20"
+                        android:layout_weight="1"
+                        android:text="@string/settings_notification_label" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_manage_requests_consumer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/size_20" />
+
+                </LinearLayout>
+
+                <View style="@style/LineG1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextSettingsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size_20"
+                        android:layout_marginRight="@dimen/size_20"
+                        android:layout_weight="1"
+                        android:text="@string/settings_notification_web_label" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_manage_requests_merchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/size_20" />
+
+                </LinearLayout>
+
+                <it.bancomatpay.sdkui.widgets.SettingsSeparatorHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="@string/settings_separator_header_exchange_money" />
+
+                <LinearLayout
+                    android:id="@+id/layout_blocked_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextSettingsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size_20"
+                        android:layout_marginRight="@dimen/size_20"
+                        android:layout_weight="1"
+                        android:text="@string/settings_blocked_contacts_label" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/size_30"
+                        android:src="@drawable/forward" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_bank_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <it.bancomatpay.sdkui.widgets.SettingsSeparatorHeader
+                        android:id="@+id/separator_header_access_bcmpay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextSettingsLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/size_20"
+                            android:layout_marginRight="@dimen/size_20"
+                            android:layout_weight="1"
+                            android:text="@string/settings_enable_bcmpay_access_label" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_enable_bcmpay_access"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/size_20" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_bank_id"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+                        <net.cachapa.expandablelayout.ExpandableLayout
+                            android:id="@+id/expandable_layout_bcmpay_access"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:el_duration="200"
+                            app:el_expanded="false"
+                            app:el_parallax="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <View style="@style/LineG1" />
+
+                                <LinearLayout
+                                    android:id="@+id/layout_blocked_merchants"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/TextSettingsLabel"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/size_20"
+                                        android:layout_marginRight="@dimen/size_20"
+                                        android:layout_weight="1"
+                                        android:text="@string/settings_blocked_merchants_label" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginEnd="@dimen/size_30"
+                                        android:src="@drawable/forward" />
+
+                                </LinearLayout>
+
+                                <View style="@style/LineG1" />
+
+                                <LinearLayout
+                                    android:id="@+id/layout_bcmpay_accesses"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:background="?attr/selectableItemBackground"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/TextSettingsLabel"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/size_20"
+                                        android:layout_marginRight="@dimen/size_20"
+                                        android:layout_weight="1"
+                                        android:text="@string/settings_bcmpay_accesses_label" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginEnd="@dimen/size_30"
+                                        android:src="@drawable/forward" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </net.cachapa.expandablelayout.ExpandableLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

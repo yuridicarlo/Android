@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="it.bancomatpay.sdkui">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="com.huawei.permission.SECURITY_DIAGNOSE" />
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        tools:node="remove" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false">
+        <activity android:name=".activities.SaveContactNumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLoyaltyCardList"/>
+        <activity
+            android:name=".activities.pos.PosWithdrawalResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemePosWithdrawalOperationResult" />
+        <activity
+            android:name=".activities.pos.PosWithdrawalDataLoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemePosWithdrawalDataLoading" />
+        <activity
+            android:name=".activities.directdebit.DirectDebitMerchantListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDirectDebitMerchantList" />
+        <activity
+            android:name=".activities.ResultPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeResultSendMoney" />
+        <activity
+            android:name=".activities.ChooseAmountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeChooseAmount" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppThemeHome" />
+        <activity
+            android:name=".activities.MerchantListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMerchantList" />
+        <activity
+            android:name=".activities.SendMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSendMoney" />
+        <activity
+            android:name=".activities.ConfirmPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeConfirmSendMoney" />
+        <activity
+            android:name=".activities.SpendingLimitsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSpendingLimits" />
+        <activity
+            android:name=".activities.NotificationListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotifications" />
+        <activity
+            android:name=".activities.ContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotifications" />
+        <activity
+            android:name=".activities.BlockedContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBlockedContacts" />
+        <activity
+            android:name=".activities.AccountsManagementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAccountsManagement" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSettings" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeProfile" />
+        <activity
+            android:name=".activities.TransactionListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTransactionList" />
+        <activity
+            android:name=".activities.TransactionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTransactionDetail" />
+        <activity
+            android:name=".activities.directdebit.DirectDebitMerchantDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDirectDebitMerchantDetail" />
+        <activity
+            android:name=".activities.TransactionReceiptActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSdkUi" />
+        <activity
+            android:name=".activities.PaymentAcceptanceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemePaymentAcceptance" />
+        <activity
+            android:name=".activities.PaymentDataLoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemePaymentDataLoading" />
+        <activity
+            android:name=".activities.loyaltycard.LoyaltyCardListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLoyaltyCardList" />
+        <activity
+            android:name=".activities.loyaltycard.LoyaltyBrandListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLoyaltyCardList" />
+        <activity
+            android:name=".activities.loyaltycard.CaptureLoyaltyCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCaptureLoyaltyCard" />
+        <activity
+            android:name=".activities.loyaltycard.LoyaltyCardDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLoyaltyCardDetail" />
+        <activity
+            android:name=".activities.loyaltycard.AddLoyaltyCardManuallyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAddLoyaltyCardManually" />
+        <activity
+            android:name=".activities.loyaltycard.AddLoyaltyCardImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAddLoyaltyCardImage" />
+        <activity
+            android:name=".activities.documents.DocumentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDocumentList" />
+        <activity
+            android:name=".activities.documents.DocumentDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAddDocument"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.documents.AddDocumentImageActivity"
+            android:largeHeap="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAddDocumentImage" />
+        <activity
+            android:name=".activities.documents.SaveDocumentImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSaveDocumentImage" />
+        <activity
+            android:name=".activities.documents.ScanFiscalCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeScanFiscalCode" />
+        <activity
+            android:name=".activities.bankid.BankIdInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBankIdInfo" />
+        <activity
+            android:name=".activities.bankid.BankIdAnagraphicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBankIdAnagraphic"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.bankid.BankIdAddAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBankIdAddAddress"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.bankid.BankIdAuthorizeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBankIdAuthorization" />
+        <activity
+            android:name=".activities.bankid.BankIdAuthorizeResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBankIdAuthorization" />
+        <activity
+            android:name=".activities.directdebit.DirectDebitAuthorizeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDirectDebitAuthorization" />
+        <activity
+            android:name=".activities.directdebit.DirectDebitAuthorizeResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDirectDebitAuthorization" />
+        <activity
+            android:name=".activities.bankid.BancomatPayAccessListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBankIdAccessList" />
+        <activity
+            android:name=".activities.bankid.BlockedMerchantListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBlockedMerchantList" />
+        <activity
+            android:name=".activities.atmcardless.AtmCardlessScanQrCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAtmCardlessScanQrCode" />
+        <activity
+            android:name=".activities.atmcardless.AtmCardlessChooseAmountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAtmCardlessChooseAmount" />
+        <activity
+            android:name=".activities.atmcardless.AtmCardlessChooseAmountManuallyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAtmCardlessChooseAmount" />
+        <activity
+            android:name=".activities.atmcardless.AtmCardlessResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAtmCardlessChooseAmount" />
+        <activity
+            android:name=".activities.petrol.PetrolChoosePumpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemePetrolChoosePump" />
+        <activity
+            android:name=".activities.petrol.PetrolChooseAmountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemePetrolChooseAmount" />
+        <activity
+            android:name=".activities.petrol.PetrolResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemePetrolResult" />
+        <activity
+            android:name=".activities.BPlayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBPlay" />
+        <activity
+            android:name=".activities.BankServiceTutorialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBankServiceTutorial" />
+        <activity
+            android:name=".activities.cashaback.CashBackRankingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCashbackFullScreen" />
+        <activity
+            android:name=".activities.cashaback.CashbackDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCashbackDetail" />
+        <activity
+            android:name=".activities.cashaback.CashbackActivationResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCashbackDigitalPayments" />
+        <activity
+            android:name=".activities.cashaback.CashbackConfirmActivationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCashbackDigitalPayments" />
+        <activity
+            android:name=".activities.disclosure.PermissionDisclosureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeInAppDisclosure" />
+        <activity
+            android:name=".activities.split_bill.SplitBillActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppThemeSplitBill" />
+
+        <receiver
+            android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ico_push" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccentBancomat" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/MAPS_API_KEY" />
+    </application>
+
+</manifest>

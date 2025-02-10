@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/grey_money_label" android:state_enabled="false"/>
+    <item android:color="@color/colorAccentBancomat" android:state_enabled="true"/>
+</selector>

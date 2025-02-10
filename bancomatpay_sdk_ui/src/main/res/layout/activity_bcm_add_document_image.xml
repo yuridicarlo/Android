@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        android:background="@android:color/transparent"
+        tools:context=".activities.documents.AddDocumentImageActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.otaliastudios.cameraview.CameraView
+                android:id="@+id/camera_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cameraPictureSizeAspectRatio="16:9"
+                app:cameraGestureTap="none"
+                app:cameraGestureLongTap="none"
+                app:cameraGesturePinch="none"
+                app:cameraGestureScrollHorizontal="none"
+                app:cameraGestureScrollVertical="none"
+                app:cameraFacing="back"
+                app:cameraFlash="off"
+                app:cameraMode="picture"
+                app:cameraAudio="off"
+                app:cameraGrid="off"
+                app:cameraPlaySounds="false"
+                app:cameraAutoFocusResetDelay="1000"
+                app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker"
+                app:cameraUseDeviceOrientation="true"
+                app:cameraPictureFormat="jpeg"
+                app:cameraRequestPermissions="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/layout_document_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/document_mask"
+                        android:layout_alignBottom="@id/document_mask"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@id/document_mask"
+                        android:src="@color/capture_image_camera_mask" />
+
+                    <ImageView
+                        android:id="@+id/document_mask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/background_camera_documents" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/document_mask"
+                        android:layout_alignBottom="@id/document_mask"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/document_mask"
+                        android:src="@color/capture_image_camera_mask" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_above="@id/layout_document_mask"
+                    android:src="@color/capture_image_camera_mask" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_below="@id/layout_document_mask"
+                    android:src="@color/capture_image_camera_mask" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_take_picture"
+                style="@style/CustomBigButton"
+                android:layout_above="@id/space_bottom"
+                android:text="@string/add_document_image_confirm" />
+
+            <View
+                android:id="@+id/space_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_vertical_margin"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <it.bancomatpay.sdkui.widgets.ToolbarSimple
+                android:id="@+id/toolbar_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/status_bar_height"
+                app:centerImg="@drawable/empty"
+                app:leftImg="@drawable/back_white" />
+
+            <TextView
+                android:id="@+id/text_title"
+                style="@style/TextTitleWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar_simple"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="8dp"
+                android:text="@string/add_document_front_image_title" />
+
+            <TextView
+                style="@style/TextSubtitleWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_title"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/add_document_image_subtitle" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

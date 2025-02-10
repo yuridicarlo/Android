@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/transparent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/toolbar_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/toolbar_icon_padding"
+            android:scaleType="fitStart"
+            android:src="@drawable/close" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/toolbar_center_left_container"
+                android:gravity="center"
+                android:layout_width="68dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/toolbar_center_left_img"
+                    android:layout_width="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/space_margin_middle"
+                android:layout_width="@dimen/activity_horizontal_margin"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/toolbar_center_right_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_bancomat" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

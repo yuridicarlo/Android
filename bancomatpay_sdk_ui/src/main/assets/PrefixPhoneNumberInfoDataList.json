@@ -1,0 +1,20 @@
+{
+  "version": "4",
+  "prefixPhoneNumberList": [
+    {
+      "prefix": "+39",
+      "country": "prefix_label_italy",
+      "countryCode": "IT"
+    },
+    {
+      "prefix": "+43",
+      "country": "prefix_label_austria",
+      "countryCode": "AT"
+    },
+    {
+      "prefix": "+49",
+      "country": "prefix_label_germany",
+      "countryCode": "DE"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/consumer_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_95"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white_background"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_image_profile"
+                android:layout_width="@dimen/contact_list_circle_placeholder"
+                android:layout_height="@dimen/contact_list_circle_placeholder"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/size_10"
+                android:layout_marginBottom="12dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/contact_consumer_image_profile_circle"
+                    android:layout_width="@dimen/contact_list_circle_placeholder"
+                    android:layout_height="@dimen/contact_list_circle_placeholder"
+                    android:src="@drawable/placeholder_circle_consumer" />
+
+                <ImageView
+                    android:id="@+id/contact_consumer_image_profile"
+                    android:layout_width="@dimen/contact_list_circle_placeholder"
+                    android:layout_height="@dimen/contact_list_circle_placeholder"
+                    android:src="@drawable/placeholder_circle_consumer" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/contact_consumer_is_active"
+                style="@style/SlidingPanelPriceStyle"
+                android:visibility="invisible"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@id/layout_image_profile"
+                android:layout_alignBottom="@id/layout_image_profile"
+                android:src="@drawable/logo_rubrica" />
+
+            <ImageView
+                android:id="@+id/image_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/check_off"/>
+
+            <LinearLayout
+                android:id="@+id/contact_consumer_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@id/image_checkbox"
+                android:layout_toEndOf="@id/layout_image_profile"
+                android:gravity="center|start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contact_consumer_name"
+                    style="@style/ContactListItemTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Claudio Consoniaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+
+                <TextView
+                    android:id="@+id/contact_consumer_number"
+                    style="@style/ContactListItemDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+39 3345680980" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contact_consumer_letter"
+                style="@style/ContactListLetterPlaceholderColoured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/layout_image_profile"
+                android:layout_alignTop="@id/layout_image_profile"
+                android:layout_alignEnd="@id/layout_image_profile"
+                android:layout_alignBottom="@id/layout_image_profile"
+                android:text="A"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

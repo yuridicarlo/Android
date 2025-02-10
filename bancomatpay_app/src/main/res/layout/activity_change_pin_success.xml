@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <it.bancomatpay.sdkui.widgets.ToolbarSimple
+            android:id="@+id/toolbar_simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerImg="@drawable/ico_logo_bcm_rubrica" />
+
+        <TextView
+            style="@style/ListLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/change_pin_activity_pin_updated" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/illustration_pin" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_close"
+                style="@style/CustomBigButton"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/close_button"
+                android:textAllCaps="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

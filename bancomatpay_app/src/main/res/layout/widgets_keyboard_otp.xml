@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="it.bancomat.pay.consumer.widget.KeyboardCodeObservable"/>
+        <variable
+            name="model"
+            type="it.bancomat.pay.consumer.widget.KeyboardCodeObservable" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:splitMotionEvents="false"
+            android:windowEnableSplitTouch="false"
+            android:background="@android:color/transparent">
+
+            <LinearLayout style="@style/WidgetsKeyboardRow">
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_1"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_one" />
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_2"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_two" />
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_3"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_three" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/WidgetsKeyboardRow">
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_4"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_four" />
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_5"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_five" />
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_6"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_six" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/WidgetsKeyboardRow">
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_7"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_seven" />
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_8"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_eight" />
+
+                <TextView
+                    android:onClick='@{(v) -> model.putDigit(v)}'
+                    android:id="@+id/num_pad_key_9"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_nine" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/WidgetsKeyboardRow">
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/num_pad_key_comma"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_comma" />
+
+                <TextView
+                    android:onClick="@{(v) -> model.putDigit(v)}"
+                    android:id="@+id/num_pad_key_0"
+                    style="@style/WidgetsKeyboardButtonSubmit"
+                    android:text="@string/widgets_keyboard_pin_num_pad_zero" />
+
+                <RelativeLayout
+                    android:onClick="@{(v) -> model.cancelDigit()}"
+
+                    android:id="@+id/num_pad_key_x"
+                    style="@style/WidgetsKeyboardButtonSubmit">
+
+                    <ImageView
+                        app:tint="@color/text_generic_color"
+                        android:src="@drawable/ic_delete_icon"
+                        android:id="@+id/keyboard_button_continue_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

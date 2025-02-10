@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_background"
+        android:orientation="vertical">
+
+        <it.bancomatpay.sdkui.widgets.ToolbarSimple
+            android:id="@+id/toolbar_simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerImg="@drawable/empty"
+            app:leftImg="@drawable/back_blue" />
+
+        <TextView
+            style="@style/TextGenericTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bcmpay_activation_label" />
+
+        <TextView
+            style="@style/TextTutorialDescriptionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/activation_act_code_title"
+            android:textColor="@color/text_color_bcm" />
+
+        <TextView
+            style="@style/TextDescriptionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/activation_act_code_description"
+            android:textColor="@color/text_color_bcm" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/insert_code_button"
+            style="@style/CustomBigButton">
+            <TextView
+                style="@style/CustomBigButton"
+                android:text="@string/activation_act_code_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                app:tint="@color/white_background"
+                android:src="@drawable/bottone_codice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginVertical="@dimen/size_15"
+            android:layout_marginStart="@dimen/size_20"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <TextView
+            style="@style/TextDescriptionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/activable_bank_list_description"
+            android:textColor="@color/text_color_bcm" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/transactions_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="@android:color/transparent"
+                app:tabBackground="?attr/selectableItemBackground"
+                app:tabGravity="center"
+                app:tabIndicatorColor="@color/generic_coloured_background"
+                app:tabIndicatorHeight="3dp"
+                app:tabMode="fixed">
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabSendMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="App BANCOMAT Pay"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabGetMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="App Bancaria"/>
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/transactions_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

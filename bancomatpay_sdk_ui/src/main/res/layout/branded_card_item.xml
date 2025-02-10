@@ -1,0 +1,69 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_fidelity_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="12dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_95">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_fidelity_card_background"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@android:color/transparent"
+            app:civ_circle_background_color="@color/colorAccentBancomat" />
+
+        <TextView
+            android:id="@+id/branded_card_placeholder"
+            style="@style/BrandedCardPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:layout_alignStart="@id/image_fidelity_card_background"
+            android:layout_alignTop="@id/image_fidelity_card_background"
+            android:layout_alignEnd="@id/image_fidelity_card_background"
+            android:layout_alignBottom="@id/image_fidelity_card_background"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="12dp"
+            android:autoSizeMinTextSize="6dp"
+            android:autoSizeStepGranularity="2dp"
+            />
+
+        <ImageView
+            android:id="@+id/image_fidelity_card_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/card_name_label"
+            style="@style/InsertCardLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_toRightOf="@id/image_fidelity_card_background" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

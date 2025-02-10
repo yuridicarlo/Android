@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragmentRestyle">
+
+    <fragment
+        android:id="@+id/homeFragmentRestyle"
+        android:name="it.bancomat.pay.consumer.home.HomeFragmentRestyle"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_restyle">
+    </fragment>
+
+    <fragment
+        android:id="@+id/bplayFragment"
+        android:name="it.bancomatpay.sdkui.fragment.home.BplayFragment"
+        android:label="fragment_bplay"
+        tools:layout="@layout/fragment_home_bplay">
+    </fragment>
+
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="it.bancomatpay.sdkui.fragment.home.ServicesFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_home_services">
+    </fragment>
+
+    <fragment
+        android:id="@+id/storeLocatorListFragment"
+        android:name="it.bancomat.pay.consumer.storeLocator.fragments.StoreLocatorListFragment"
+        android:label="fragment_store_locator_list"
+        tools:layout="@layout/fragment_store_locator_list">
+        <action
+            android:id="@+id/action_storeLocatorListFragment_to_physicalShopListFragment"
+            app:destination="@id/physicalShopListFragment"
+            >
+            <argument
+                android:name="location"
+                app:argType="it.bancomatpay.sdk.manager.task.model.BcmLocation"/>
+        </action>
+        <action
+            android:id="@+id/action_ecommerceCategoryListFragment_to_ecommerceShopListFragment"
+            app:destination="@id/ecommerceShopListFragment">
+            <argument
+                android:name="category"
+                app:argType="string"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/ecommerceShopListFragment"
+        android:name="it.bancomat.pay.consumer.storeLocator.fragments.EcommerceShopListFragment"
+        android:label="fragment_ecommerce_shop_list"
+        tools:layout="@layout/fragment_ecommerce_shop_list">
+    </fragment>
+    <fragment
+        android:id="@+id/physicalShopListFragment"
+        android:name="it.bancomat.pay.consumer.storeLocator.fragments.PhysicalShopListFragment"
+        android:label="PhysicalShopListFragment"
+        tools:layout="@layout/fragment_physical_shop_list">
+        <argument
+            android:name="location"
+            app:argType="it.bancomatpay.sdk.manager.task.model.BcmLocation"/>
+    </fragment>
+
+</navigation>

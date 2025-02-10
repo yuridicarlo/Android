@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/main_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"
+		android:fitsSystemWindows="false"
+		tools:context=".activities.ConfirmPaymentActivity">
+
+		<RelativeLayout
+			android:id="@+id/layout_to_screenshot"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/generic_coloured_background">
+
+			<ImageView
+				android:id="@+id/image_card_background_color"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="@dimen/status_bar_height"
+				android:layout_marginRight="-1dp"
+				android:layout_marginBottom="-1dp"
+				android:background="@drawable/background_center_no_gradient"
+				android:orientation="vertical"
+				android:weightSum="1">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_marginLeft="24dp"
+					android:layout_marginRight="24dp"
+					android:layout_weight="0.5">
+
+					<ImageView
+						android:id="@+id/image_barcode_logo"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+						android:layout_marginLeft="@dimen/size_40"
+						android:layout_marginRight="@dimen/size_40"
+						android:scaleType="fitCenter" />
+
+					<de.hdodenhof.circleimageview.CircleImageView
+						android:id="@+id/image_card_circle"
+						android:layout_width="120dp"
+						android:layout_height="120dp"
+						android:layout_centerInParent="true" />
+
+					<TextView
+						android:id="@+id/text_logo_known_card"
+						style="@style/KnownBrandCardNameText"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_centerInParent="true"
+						android:autoSizeMaxTextSize="35dp"
+						android:autoSizeMinTextSize="25dp"
+						android:autoSizeStepGranularity="2dp"
+						android:autoSizeTextType="uniform"
+						android:ellipsize="end"
+						android:maxLines="1"
+						android:visibility="gone" />
+
+					<TextView
+						android:id="@+id/text_card_brand_name"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_below="@id/image_card_circle"
+						android:layout_centerHorizontal="true"
+						android:layout_marginTop="@dimen/activity_vertical_margin"
+						android:autoSizeMaxTextSize="21dp"
+						android:autoSizeMinTextSize="17dp"
+						android:autoSizeStepGranularity="2dp"
+						android:autoSizeTextType="uniform"
+						android:ellipsize="end"
+						android:fontFamily="@font/lato_text_semibold"
+						android:maxLines="1"
+						android:textColor="@android:color/white"
+						android:textSize="21dp" />
+
+				</RelativeLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight=".43"
+					android:gravity="center"
+					android:orientation="vertical">
+
+					<ImageView
+						android:id="@+id/barcode_img"
+						android:layout_width="match_parent"
+						android:layout_height="150dp"
+						android:layout_marginLeft="35dp"
+						android:layout_marginTop="55dp"
+						android:layout_marginRight="35dp"
+						android:scaleType="fitXY" />
+
+				</LinearLayout>
+
+				<TextView
+					android:id="@+id/barcode_number"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/activity_horizontal_margin"
+					android:layout_marginRight="@dimen/activity_horizontal_margin"
+					android:ellipsize="end"
+					android:fontFamily="@font/lato_text_regular"
+					android:gravity="center_horizontal"
+					android:maxLines="1"
+					android:textColor="@color/black"
+					android:textSize="30dp" />
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+		<it.bancomatpay.sdkui.widgets.ToolbarSimple
+			android:id="@+id/toolbar_simple"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toTopOf="parent"
+			android:layout_marginTop="@dimen/status_bar_height"
+			app:leftImg="@drawable/back_white"
+			app:centerImg="@drawable/logo_bancomat"
+			app:rightImg="@drawable/menu_more" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

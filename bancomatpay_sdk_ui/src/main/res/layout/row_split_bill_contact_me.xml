@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<com.google.android.material.card.MaterialCardView
+			android:layout_marginHorizontal="@dimen/size_10"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			app:cardBackgroundColor="@android:color/transparent"
+			app:cardCornerRadius="25dp"
+			app:cardElevation="0dp">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<ImageView
+					android:id="@+id/split_bill_me_image"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:src="@drawable/contact_list_item_circle_background" />
+
+				<TextView
+					android:id="@+id/split_bill_me_label"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true" />
+
+			</RelativeLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+	</LinearLayout>
+
+</layout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/button_save_document"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_document_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:visibility="gone">
+
+                    <it.bancomatpay.sdkui.widgets.CustomEditText
+                        android:id="@+id/edit_text_document_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapWords"
+                        app:elevation="2dp"
+                        app:hint="@string/add_document_hint_document_name"
+                        app:maxCharacters="50"
+                        app:showDefaultCancel="false"
+                        app:showErrorText="false"
+                        app:prefixSelector="false" />
+
+
+                </LinearLayout>
+
+                <it.bancomatpay.sdkui.widgets.CustomEditText
+                    android:id="@+id/edit_text_surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    app:elevation="2dp"
+                    app:hint="@string/add_document_hint_surname"
+                    app:maxCharacters="50"
+                    app:showDefaultCancel="false"
+                    app:showErrorText="false"
+                    app:prefixSelector="false"/>
+
+
+
+                <it.bancomatpay.sdkui.widgets.CustomEditText
+                    android:id="@+id/edit_text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    app:elevation="2dp"
+                    app:hint="@string/add_document_hint_name"
+                    app:maxCharacters="50"
+                    app:showDefaultCancel="false"
+                    app:showErrorText="false"
+                    app:prefixSelector="false" />
+
+
+                <it.bancomatpay.sdkui.widgets.CustomEditText
+                    android:id="@+id/edit_text_document_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    app:elevation="2dp"
+                    app:hint="@string/add_document_hint_number"
+                    app:maxCharacters="128"
+                    app:showDefaultCancel="false"
+                    app:showErrorText="false"
+                    app:prefixSelector="false" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <it.bancomatpay.sdkui.widgets.CustomEditText
+                        android:id="@+id/edit_text_issuer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        app:elevation="2dp"
+                        app:hint="@string/add_document_hint_issuer"
+                        app:maxCharacters="100"
+                        app:showDefaultCancel="false"
+                        app:showErrorText="false"
+                        app:prefixSelector="false" />
+
+                    <ImageView
+                        android:id="@+id/image_scan_fiscal_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/edit_text_issuer"
+                        android:layout_alignBottom="@id/edit_text_issuer"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/barcode_scan_camera"
+                        android:translationZ="4dp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/edit_text_date_emission_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <it.bancomatpay.sdkui.widgets.CustomEditText
+                        android:id="@+id/edit_text_date_emission"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        app:elevation="2dp"
+                        app:hint="@string/add_document_hint_emission_date"
+                        app:showDefaultCancel="false"
+                        app:showErrorText="false"
+                        app:prefixSelector="false" />
+
+
+                </LinearLayout>
+
+                <it.bancomatpay.sdkui.widgets.CustomEditText
+                    android:id="@+id/edit_text_date_expiration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    app:elevation="2dp"
+                    app:hint="@string/add_document_hint_expiration_date"
+                    app:showDefaultCancel="false"
+                    app:showErrorText="false"
+                    app:prefixSelector="false" />
+
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/add_date_to_calendar_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="200"
+                    app:el_expanded="false"
+                    app:el_parallax="1">
+
+                    <TextView
+                        android:id="@+id/add_date_to_calendar_text"
+                        style="@style/AddDateToCalendarText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/calendar_scadenza"
+                        android:drawablePadding="10dp"
+                        android:focusable="true"
+                        android:paddingLeft="32dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/add_expiration_date" />
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+                <it.bancomatpay.sdkui.widgets.CustomEditText
+                    android:id="@+id/edit_text_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage|textCapSentences"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    app:elevation="2dp"
+                    app:hint="@string/add_document_hint_notes"
+                    app:maxCharacters="500"
+                    app:showDefaultCancel="false"
+                    app:showErrorText="false"
+                    app:prefixSelector="false" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_save_document"
+            style="@style/CustomBigButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/document_save" />
+
+    </RelativeLayout>
+
+</layout>

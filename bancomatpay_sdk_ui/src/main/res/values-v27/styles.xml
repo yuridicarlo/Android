@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppThemeAddDocumentImage" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+
+    </style>
+
+
+    <style name="AppThemeSaveDocumentImage" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>"
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+
+    </style>
+
+    <style name="AppThemeAddLoyaltyCardImage" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+
+    </style>
+
+    <style name="AppThemeCaptureLoyaltyCard" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+</resources>

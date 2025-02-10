@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground">
+
+  <!--  <it.reply.pay.core.widgets.CustomTextView
+        android:id="@+id/image_bank"
+        android:layout_marginStart="@dimen/size_20"
+        android:layout_marginTop="@dimen/size_30"
+        android:layout_marginBottom="@dimen/size_30"
+        android:layout_marginEnd="@dimen/size_25"
+        style="@style/LinkText"
+        android:text="@string/activation_user_bank_list_activity_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+  &lt;!&ndash;  <ImageView
+        android:id="@+id/imageView8"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ico_arrow_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_20"/>&ndash;&gt;
+
+    <View
+        android:layout_below="@+id/image_bank"
+        style="@style/LineG1"/>
+-->
+</RelativeLayout>

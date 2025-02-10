@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "91633605391",
+    "firebase_url": "https://bancomat-pay.firebaseio.com",
+    "project_id": "bancomat-pay",
+    "storage_bucket": "bancomat-pay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91633605391:android:e4f9f75e07f5aa19",
+        "android_client_info": {
+          "package_name": "it.bancomat.pay.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91633605391-vab3ieii13no727q70sr44ster5rco5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNwObx7A0k3-4U-H3Q1wWl_cLm5kmRJOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91633605391-vab3ieii13no727q70sr44ster5rco5c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "91633605391-dktfhtmnuuikn2cskim2dfc9bni8mu8h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "it.bancomat.pay.user",
+                "app_store_id": "1467760256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91633605391:android:389bf0a30a3b67de",
+        "android_client_info": {
+          "package_name": "it.bancomat.pay.user.sit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91633605391-vab3ieii13no727q70sr44ster5rco5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNwObx7A0k3-4U-H3Q1wWl_cLm5kmRJOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91633605391-vab3ieii13no727q70sr44ster5rco5c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "91633605391-dktfhtmnuuikn2cskim2dfc9bni8mu8h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "it.bancomat.pay.user",
+                "app_store_id": "1467760256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91633605391:android:21ebffeaa7be405db83c7a",
+        "android_client_info": {
+          "package_name": "it.bancomat.pay.user.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91633605391-vab3ieii13no727q70sr44ster5rco5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNwObx7A0k3-4U-H3Q1wWl_cLm5kmRJOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91633605391-vab3ieii13no727q70sr44ster5rco5c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "91633605391-dktfhtmnuuikn2cskim2dfc9bni8mu8h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "it.bancomat.pay.user",
+                "app_store_id": "1467760256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91633605391:android:bc2bfa78e9acd826",
+        "android_client_info": {
+          "package_name": "it.bancomat.pay.user.uat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91633605391-vab3ieii13no727q70sr44ster5rco5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNwObx7A0k3-4U-H3Q1wWl_cLm5kmRJOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91633605391-vab3ieii13no727q70sr44ster5rco5c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "91633605391-dktfhtmnuuikn2cskim2dfc9bni8mu8h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "it.bancomat.pay.user",
+                "app_store_id": "1467760256"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

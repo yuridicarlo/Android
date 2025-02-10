@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BancomatPaySdk</string>
+    <string name="label_environment">Demo SIT</string>
+</resources>

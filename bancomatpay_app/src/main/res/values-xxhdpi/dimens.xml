@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="activation_edit_text_margin_top">70dp</dimen>
+
+</resources>

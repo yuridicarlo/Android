@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="SpUsage">
+
+    <style name="AppThemeTransparent" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+</resources>

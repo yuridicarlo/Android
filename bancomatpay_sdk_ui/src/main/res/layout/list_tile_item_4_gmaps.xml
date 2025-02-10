@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white_background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/consumer_container"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white_background"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_image_profile"
+                android:layout_width="@dimen/map_list_circle_placeholder"
+                android:layout_height="@dimen/map_list_circle_placeholder"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/size_10"
+                android:layout_marginBottom="12dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/leading_icon_circle"
+                    android:layout_width="@dimen/map_list_circle_placeholder"
+                    android:layout_height="@dimen/map_list_circle_placeholder"
+                    android:src="@drawable/placeholder_circle_consumer" />
+
+                <ImageView
+                    android:id="@+id/leading_icon"
+                    android:layout_width="@dimen/map_list_circle_placeholder"
+                    android:layout_height="@dimen/map_list_circle_placeholder"
+                    android:src="@drawable/placeholder_circle_consumer" />
+
+            </RelativeLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/centralLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_toEndOf="@id/layout_image_profile">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/ContactListItemTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_7"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toTopOf="@+id/subtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="Titolooaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    style="@style/ContactListItemDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_7"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title"
+                    app:layout_constraintBottom_toTopOf="@+id/location_icon"
+                    tools:visibility="visible"
+                    tools:text="Sottotitolooaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+
+                <ImageView
+                    android:id="@+id/location_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subtitle"
+                    android:src="@drawable/ico_distanza"
+                    />
+
+                <TextView
+                    android:id="@+id/trailing_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/location_icon"
+                    app:layout_constraintTop_toTopOf="@+id/location_icon"
+                    tools:visibility="visible"
+                    tools:text="Km 0,5"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/directions_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subtitle"
+                    >
+                    <ImageView
+                        android:id="@+id/directions_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/directions_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/subtitle"
+                        android:src="@drawable/ico_indicazioni"/>
+
+                    <TextView
+                        android:id="@+id/directions_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/location_icon"
+                        tools:visibility="visible"
+                        style="@style/link"
+                        android:text="@string/directions"
+                    />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/contact_consumer_letter"
+                style="@style/ContactListLetterPlaceholderColoured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/layout_image_profile"
+                android:layout_alignTop="@id/layout_image_profile"
+                android:layout_alignEnd="@id/layout_image_profile"
+                android:layout_alignBottom="@id/layout_image_profile"
+                tools:text="A"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

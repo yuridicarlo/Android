@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="SpUsage">
+
+    <style name="AppThemeSdkUi" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimaryBancomat</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="android:dialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:buttonBarButtonStyle">@style/DialogButton</item>
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppThemeHome" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@color/blue_status_bar</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="popupMenuStyle">@style/HomePopupMenu</item>
+        <item name="textAppearanceLargePopupMenu">@style/HomeTextPopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">@style/HomeTextPopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/HomePopupDropdownList</item>
+    </style>
+
+    <style name="AppThemeSendMoney" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeMerchantList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeTransactionList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePaymentAcceptance" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeProfile" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePaymentDataLoading" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+<style name="AppThemePosWithdrawalDataLoading" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeTransactionDetail" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeChooseAmount" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeCashbackFullScreen" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeResultSendMoney" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeConfirmSendMoney" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeSettings" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeSplitBill" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAccountsManagement" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeSpendingLimits" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeNotifications" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBlockedContacts" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeLoyaltyCard" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeLoyaltyCardDetail" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+        <item name="popupMenuStyle">@style/CardDetailPopupMenu</item>
+        <item name="textAppearanceLargePopupMenu">@style/HomeTextPopupCardDetail</item>
+        <item name="textAppearanceSmallPopupMenu">@style/HomeTextPopupCardDetail</item>
+        <item name="android:dropDownListViewStyle">@style/CardDetailPopupDropdownList</item>
+    </style>
+
+    <style name="AppThemeLoyaltyCardList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBrandedCardList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeCaptureLoyaltyCard" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAddLoyaltyCardManually" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAddLoyaltyCardImage" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAddDocument" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAddDocumentImage" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeSaveDocumentImage" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeScanFiscalCode" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/transparent</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="BottomSheetDialogCustomStyle" parent="@style/Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Demo.BottomSheet</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/white
+        </item>
+    </style>
+
+    <style name="Widget.Demo.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Demo</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Demo" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <style name="AppThemeInAppDisclosure" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+</resources>

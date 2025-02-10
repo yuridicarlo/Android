@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	>
+
+	<LinearLayout
+		android:id="@+id/main_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/generic_coloured_background"
+		android:fitsSystemWindows="false">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/img_recap">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginBottom="-1dp"
+				android:background="@drawable/background_center_profile"
+				android:orientation="vertical"
+				android:weightSum="1">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="0.55">
+
+					<it.bancomatpay.sdkui.widgets.ToolbarSimple
+						android:id="@+id/toolbar_simple"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentTop="true"
+						android:layout_marginTop="@dimen/status_bar_height"
+						app:centerImg="@drawable/logo_bancomat"
+						app:leftImg="@drawable/back_white" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_below="@id/toolbar_simple"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<RelativeLayout
+							android:id="@+id/contact_consumer_box"
+							android:layout_width="120dp"
+							android:layout_height="120dp"
+							android:layout_gravity="center"
+							android:gravity="center">
+
+							<de.hdodenhof.circleimageview.CircleImageView
+								android:id="@+id/profile_image_circle"
+								android:layout_width="92dp"
+								android:layout_height="92dp"
+								android:src="@drawable/profile_letter_circle_background"
+								android:visibility="visible" />
+
+							<ImageView
+								android:layout_width="34dp"
+								android:layout_height="34dp"
+								android:layout_alignRight="@id/profile_image_circle"
+								android:layout_alignBottom="@id/profile_image_circle"
+								android:layout_marginRight="-11dp"
+								android:src="@drawable/logo_rubrica" />
+
+							<TextView
+								android:id="@+id/profile_letter"
+								style="@style/ProfileTextLetter"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_alignStart="@id/profile_image_circle"
+								android:layout_alignTop="@id/profile_image_circle"
+								android:layout_alignEnd="@id/profile_image_circle"
+								android:layout_alignBottom="@id/profile_image_circle"
+								android:text="AM"
+								android:visibility="visible" />
+
+						</RelativeLayout>
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="25dp" />
+
+						<TextView
+							android:id="@+id/profile_name"
+							style="@style/ProfileTextName"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="5dp" />
+
+						<TextView
+							android:id="@+id/profile_phone"
+							style="@style/ProfileTextNumber"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" />
+
+					</LinearLayout>
+
+				</RelativeLayout>
+
+				<ScrollView
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight=".45">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<LinearLayout
+							android:id="@+id/profile_accounts_management"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:background="?attr/selectableItemBackground"
+							android:gravity="center_vertical"
+							android:orientation="horizontal"
+							android:paddingStart="@dimen/size_30"
+							android:paddingTop="@dimen/size_25"
+							android:paddingEnd="@dimen/size_30"
+							android:paddingBottom="@dimen/size_25">
+
+							<ImageView
+								android:layout_width="30dp"
+								android:layout_height="wrap_content"
+								android:src="@drawable/menu_gestione_conti" />
+
+							<TextView
+								style="@style/ProfileTextActionLabel"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="@dimen/size_10"
+								android:layout_weight="1"
+								android:text="@string/profile_accounts_management_label" />
+
+							<ImageView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:src="@drawable/forward" />
+
+						</LinearLayout>
+
+						<View style="@style/LineG1" />
+
+						<LinearLayout
+							android:id="@+id/profile_spending_limits"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical">
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:background="?attr/selectableItemBackground"
+								android:gravity="center_vertical"
+								android:orientation="horizontal"
+								android:paddingStart="@dimen/size_30"
+								android:paddingTop="@dimen/size_25"
+								android:paddingEnd="@dimen/size_30"
+								android:paddingBottom="@dimen/size_25"
+								android:visibility="visible">
+
+								<ImageView
+									android:layout_width="30dp"
+									android:layout_height="wrap_content"
+									android:src="@drawable/menu_limiti_spesa" />
+
+								<TextView
+									style="@style/ProfileTextActionLabel"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_marginStart="@dimen/size_10"
+									android:layout_weight="1"
+									android:text="@string/profile_spending_limits_label" />
+
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center_vertical"
+									android:src="@drawable/forward" />
+
+							</LinearLayout>
+
+							<View style="@style/LineG1" />
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:id="@+id/profile_disable_profile"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:background="?attr/selectableItemBackground"
+							android:gravity="center_vertical"
+							android:orientation="horizontal"
+							android:paddingStart="@dimen/size_30"
+							android:paddingTop="@dimen/size_25"
+							android:paddingEnd="@dimen/size_30"
+							android:paddingBottom="@dimen/size_25"
+							android:visibility="gone"
+							tools:visibility="visible"
+							>
+
+							<ImageView
+								android:layout_width="30dp"
+								android:layout_height="wrap_content"
+								android:src="@drawable/menu_disattiva" />
+
+							<TextView
+								style="@style/ProfileTextActionLabel"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="@dimen/size_10"
+								android:layout_weight="1"
+								android:text="@string/profile_disable_profile_label" />
+
+							<ImageView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:src="@drawable/forward" />
+
+						</LinearLayout>
+
+
+
+					</LinearLayout>
+
+				</ScrollView>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</layout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/container_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/merchant_zxing_barcode_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:zxing_preview_scaling_strategy="fitXY"
+            app:zxing_use_texture_view="false" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="72dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_home_camera_on" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/home_image_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/home_background"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/layout_slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:orientation="vertical">
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandable_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".8"
+                    app:el_duration="350"
+                    app:el_expanded="false"
+                    app:el_parallax="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/background_home_small_higher" />
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/background_home_small_lower" />
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/page_indicator_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:paddingTop="2dp"
+                    android:visibility="invisible"
+                    app:piv_animationType="fill"
+                    app:piv_dynamicCount="false"
+                    app:piv_interactiveAnimation="false"
+                    app:piv_padding="8dp"
+                    app:piv_radius="3dp"
+                    app:piv_selectedColor="@android:color/white"
+                    app:piv_unselectedColor="@android:color/white"
+                    app:piv_viewPager="@id/viewpager" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".05" />
+
+            <com.google.android.material.button.MaterialButton
+                android:visibility="visible"
+                android:id="@+id/button_pay_in_stores"
+                style="@style/HomeButtonPayInStores"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:stateListAnimator="@null"
+                android:text="@string/button_home_pay_in_stores"
+                app:backgroundTint="@color/button_home_pay_in_stores_background"
+                app:cornerRadius="21dp"
+                app:rippleColor="@color/ripple_color_dark" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".05" />
+
+        </LinearLayout>
+
+        <it.bancomatpay.sdkui.widgets.ToolbarHome
+            android:id="@+id/toolbar_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/status_bar_height"
+            app:hasDoubleLogo="true" />
+
+        <LinearLayout
+            android:id="@+id/layout_plafond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_home"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/HomePlafondTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/plafond_title" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_plafond_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/text_plafond"
+                        style="@style/HomePlafondTextLabel"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/text_plafond_hidden"
+                        style="@style/HomePlafondTextLabel"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/image_eye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/text_plafond"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/eye_hide" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_plafond_error"
+                    style="@style/HomePlafondTextError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/plafond_error"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/home_fab_button"
+            android:layout_below="@id/layout_plafond"
+            android:layout_marginTop="30dp"
+            android:overScrollMode="never"
+            android:visibility="invisible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home_fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/home_fab_margin_bottom"
+            android:src="@drawable/qrcode_closed_icon"
+            app:backgroundTint="@android:color/white"
+            app:fabSize="normal"
+            app:rippleColor="?attr/colorControlHighlight"
+            app:tint="@null" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_qr_code_label"
+        style="@style/HomeTextQrCodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/home_qr_code_label_margin_top"
+        android:text="@string/qr_code_label" />
+
+</RelativeLayout>

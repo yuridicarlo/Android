@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/main_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"
+		android:orientation="vertical"
+		android:fitsSystemWindows="false"
+		tools:context=".activities.bankid.BankIdAuthorizeResultActivity">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/generic_coloured_background">
+
+			<RelativeLayout
+				android:id="@+id/layout_merchant_image"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:background="@drawable/img_merchant"
+					android:orientation="vertical"
+					android:weightSum="1">
+
+					<ImageView
+						android:id="@+id/image_background_merchant"
+						android:layout_width="match_parent"
+						android:layout_height="0dp"
+						android:layout_weight="0.47"
+						android:scaleType="centerCrop"
+						android:visibility="invisible" />
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0dp"
+						android:layout_weight="0.53" />
+
+				</LinearLayout>
+
+				<ImageView
+					android:id="@+id/image_background_mask"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:src="@color/merchant_image_background_mask"
+					android:visibility="invisible" />
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginBottom="-1dp"
+			android:background="@drawable/background_right"
+			android:orientation="vertical"
+			android:weightSum="1">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="0.43">
+
+				<it.bancomatpay.sdkui.widgets.ToolbarSimple
+					android:id="@+id/toolbar_simple"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					app:centerImg="@drawable/logo_bancomat"
+					android:layout_marginTop="@dimen/status_bar_height" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_below="@id/toolbar_simple"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:orientation="vertical"
+					android:visibility="visible">
+
+					<TextView
+						android:id="@+id/text_petrol_name"
+						style="@style/TransactionDetailTextTitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content" />
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/size_8" />
+
+					<TextView
+						android:id="@+id/text_petrol_address"
+						style="@style/TransactionDetailTextSubtitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content" />
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/size_12" />
+
+					<com.google.android.material.floatingactionbutton.FloatingActionButton
+						android:id="@+id/fab_petrol_location"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@drawable/pin"
+						app:backgroundTint="@android:color/white"
+						app:fabSize="mini"
+						app:rippleColor="?attr/colorControlHighlight"
+						app:tint="@null" />
+
+
+				</LinearLayout>
+
+			</RelativeLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight=".57"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="60dp"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:id="@+id/result_view"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<com.airbnb.lottie.LottieAnimationView
+							android:id="@+id/result_animation"
+							android:layout_width="60dp"
+							android:layout_height="60dp"
+							android:layout_gravity="center"
+							android:layout_marginTop="20dp"
+							android:visibility="invisible"
+							app:lottie_autoPlay="true"
+							app:lottie_loop="false" />
+
+						<TextSwitcher
+							android:id="@+id/result_text_switcher"
+							style="@style/AmountLabel"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="12dp"
+							android:layout_marginTop="18dp"
+							android:layout_marginRight="12dp"
+							android:layout_marginBottom="8dp" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_gravity="bottom"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/text_petrol_preauth_amount"
+						style="@style/AmountLabel"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_above="@id/close_button"
+						android:text="@string/petrol_preauthorized_amount_label"
+						android:visibility="invisible" />
+
+					<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/close_button"
+						style="@style/CustomBigButton"
+						android:layout_alignParentBottom="true"
+						android:layout_marginTop="40dp"
+						android:layout_marginBottom="20dp"
+						android:text="@string/close_button"
+						android:visibility="invisible" />
+
+				</RelativeLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<ImageView
+			android:id="@+id/loading_img_background"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="fitXY"
+			android:src="@drawable/img_recap" />
+
+		<com.airbnb.lottie.LottieAnimationView
+			android:id="@+id/result_loader"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"
+			android:scaleType="centerCrop"
+			app:lottie_autoPlay="true"
+			app:lottie_fileName="@string/loader_right"
+			app:lottie_loop="true" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

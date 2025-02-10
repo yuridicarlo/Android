@@ -1,0 +1,149 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="it.bancomat.pay.consumer.widget.KeyboardCodeObservable"/>
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="it.bancomat.pay.consumer.widget.KeyboardCodeObservable" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/contacts_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/insert_otp_title"
+                style="@style/TextGenericTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/bcmpay_activation_label" />
+
+            <TextView
+                android:id="@+id/otp_text_label"
+                style="@style/TextDescriptionStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="4dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/insert_otp_text"
+                android:textColor="@color/text_generic_color" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activation_edit_text_margin_top"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/texfield">
+
+                <ImageView
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/image_error_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit_text_error_background"
+                    android:visibility="@{model.showError ? View.VISIBLE : View.INVISIBLE}" />
+
+                <EditText
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/button_keyboard"
+                    android:id="@+id/insert_number_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignStart="@id/button_keyboard"
+                    android:background="@null"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/lato_text_regular"
+                    android:hint="@string/insert_otp_hint"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="@dimen/size_27"
+                    android:text="@={model.code}"
+                    android:textColorHint="@color/payment_total_label_payment"
+                    android:textSize="16dp" />
+
+                <FrameLayout
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/button_keyboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/keyboard_button_continue_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/keyboard_continue_off"
+                        android:paddingVertical="5dp"
+                        android:visibility="@{model.validCode ? View.GONE : View.VISIBLE}" />
+
+                    <ImageView
+                        android:id="@+id/keyboard_button_continue_on"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="3dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/keyboard_continue_on"
+                        android:paddingVertical="5dp"
+                        android:visibility="@{model.validCode ? View.VISIBLE : View.GONE}" />
+
+                </FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/error_message"
+                style="@style/TextErrorLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="5dp"
+                android:visibility="@{model.showError ? View.VISIBLE : View.INVISIBLE}" />
+
+            <TextView
+                android:id="@+id/resend_otp_button"
+                style="@style/TextActionLabelSemiBoldLittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="8dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="8dp"
+                android:text="@string/send_new_otp_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

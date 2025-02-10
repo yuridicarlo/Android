@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<it.bancomatpay.sdkui.widgets.ToolbarSimple
+			android:id="@+id/toolbar_simple"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			app:centerImg="@drawable/empty"
+			app:leftImg="@drawable/back_blue" />
+
+		<ImageView
+			android:id="@+id/image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:src="@drawable/logo_completo_bplay"
+		 />
+
+		<WebView
+			android:id="@+id/web_view_bplay"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@id/toolbar_simple" />
+
+	</RelativeLayout>
+
+</layout>

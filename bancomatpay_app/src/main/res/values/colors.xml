@@ -1,0 +1,26 @@
+<resources>
+
+    <color name="colorPrimary">#FBFBFB</color>
+    <color name="colorPrimaryDark">#ECEDED</color>
+    <color name="colorAccent">#3BBDEF</color>
+
+    <color name="colorAccentAlpha">#993BBDEF</color>
+    <color name="greyLight">#3F3F3F</color>
+    <color name="greyDisabled">#A5A5A5</color>
+    <color name="grey_line">#BEBDBE</color>
+    <color name="grey">#CFCFCF</color>
+    <color name="grey_input">#E6E3E3</color>
+
+    <color name="label_login_white_alpha">#40FFFFFF</color>
+    <color name="activation_progressbar_background">#F7F8FB</color>
+    <color name="activation_progressbar_color">#3BBCED</color>
+    <color name="text_error_color">#CD5E59</color>
+    <color name="text_hint_color">#BCBCBC</color>
+    <color name="transactions_money_received">#22A426</color>
+    <color name="blue_status_bar">#2880AA</color>
+    <color name="blue_navigation_bar">#48A6D5</color>
+    <color name="backGray">#F6F6F6</color>
+    <color name="overlay">#99000000</color>
+    <color name="sdk_background">#10000000</color>
+
+</resources>

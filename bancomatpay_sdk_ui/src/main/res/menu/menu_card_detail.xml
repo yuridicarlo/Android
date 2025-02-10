@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item
+            android:id="@+id/edit_card_voice"
+            android:title="@string/edit_card"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/share_card_voice"
+            android:title="@string/share_card"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/delete_card_voice"
+            android:title="@string/delete_card"
+            app:showAsAction="never" />
+    </group>
+
+
+</menu>

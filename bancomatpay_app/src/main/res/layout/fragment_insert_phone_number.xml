@@ -1,0 +1,83 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/contacts_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/insert_phone_number_title"
+            style="@style/TextGenericTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/bcmpay_activation_label" />
+
+        <TextView
+            style="@style/TextDescriptionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="4dp"
+            android:lines="2"
+            android:text="@string/insert_your_phone_number"
+            android:textColor="@color/text_color_bcm" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activation_edit_text_margin_top"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/texfield"
+            android:gravity="center_vertical">
+
+            <it.bancomatpay.sdkui.widgets.LabelTelephone
+                android:id="@+id/insert_number_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:imeOptions="flagNoAccessoryAction"
+                android:inputType="none"
+                android:paddingLeft="5dp"
+                android:textColor="@color/text_color_bcm"
+                android:textSize="16dp"
+                app:showPrefixSelector="true" />
+
+            <ImageView
+                android:id="@+id/cancel_button_insert_number"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:src="@drawable/cancel_azur" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <it.bancomatpay.sdkui.widgets.KeyboardCustom
+                android:id="@+id/keyboard_custom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activation_keyboard_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

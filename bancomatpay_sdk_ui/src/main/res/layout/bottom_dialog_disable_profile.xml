@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_overlay"
+    android:orientation="vertical">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_sliding_layout_background"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <ImageView
+        android:id="@+id/image_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginHorizontal="20dp"
+        android:src="@drawable/home_sliding_layout_handle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_disable_profile_step_1_2"
+            style="@style/TextBottomsheetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_bottomsheet_disable_profile_title"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/title_disable_profile_step_3"
+            style="@style/TextBottomsheetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_bottomsheet_disable_profile_step_3_title"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_disable_profile_step_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/TextBottomsheetLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_bottomsheet_disable_profile_label" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_disable_profile_step_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                style="@style/TextBottomsheetLabel"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="@string/profile_bottomsheet_disable_profile_step_2_label" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shadow_background"
+                android:padding="2dp">
+
+                <Spinner
+                    android:id="@+id/spinner_disable_profile_reason"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profile_disable_spinner_background"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                    android:popupBackground="@android:color/white"
+                    android:popupElevation="3dp"
+                    android:stateListAnimator="@animator/spinner_open_animation" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_disable_profile_step_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                style="@style/TextBottomsheetLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_bottomsheet_disable_profile_step_3_label" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_confirm_disable_profile"
+            style="@style/CustomBigButton"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:text="@string/confirm" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_disable_app"
+            style="@style/CustomBigButton"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:text="@string/profile_bottomsheet_disable_profile_step_2_button_label"
+            android:enabled="false"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_close_app"
+            style="@style/CustomBigButton"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:text="@string/profile_bottomsheet_disable_profile_step_3_button_label"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+</LinearLayout>

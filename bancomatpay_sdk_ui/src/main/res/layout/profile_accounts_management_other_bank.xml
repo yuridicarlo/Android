@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="false"
+        android:gravity="start|center"
+        android:paddingStart="@dimen/size_30"
+        android:paddingTop="@dimen/size_30"
+        android:paddingEnd="@dimen/size_30"
+        android:paddingBottom="@dimen/size_30">
+
+        <ImageView
+            android:id="@+id/profile_iban_image_check"
+            android:layout_width="@dimen/size_30"
+            android:layout_height="@dimen/size_30"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/size_20"
+            android:src="@drawable/check"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_label_other_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/profile_iban_image_check"
+            android:text="Conto di altra Banca con cui hai attivato BANCOMAT Pay®" />
+
+    </RelativeLayout>
+
+    <View style="@style/LineG1" />
+
+</LinearLayout>

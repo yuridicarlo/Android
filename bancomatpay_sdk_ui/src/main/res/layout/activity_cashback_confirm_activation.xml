@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"
+		android:orientation="vertical">
+
+		<it.bancomatpay.sdkui.widgets.ToolbarSimple
+			android:id="@+id/toolbar_simple"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:centerImg="@drawable/empty"
+			app:layout_constraintBottom_toTopOf="@id/title"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:leftImg="@drawable/back_blue" />
+
+		<TextView
+			android:id="@+id/title"
+			style="@style/TextGenericTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/cashback_title"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/toolbar_simple" />
+
+		<TextView
+			android:id="@+id/description"
+			style="@style/TextDescriptionStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/activity_horizontal_margin"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="@dimen/activity_horizontal_margin"
+			android:layout_marginBottom="4dp"
+			android:lineSpacingMultiplier="1.2"
+			android:text="@string/cashback_terms_and_co_recap"
+			android:textColor="@color/text_color_bcm"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/title" />
+
+		<ImageView
+			android:id="@+id/image_riepilogue"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="45dp"
+			android:src="@drawable/illustration_cashback_riepilogo"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/description" />
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/button_confirm"
+			style="@style/CustomBigButton"
+			android:layout_marginBottom="20dp"
+			android:text="@string/confirm"
+			android:enabled="false"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintStart_toStartOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

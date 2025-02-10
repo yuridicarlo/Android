@@ -1,0 +1,1 @@
+include ':bancomatpay_sdk_ui', ':bancomatpay_sdk_core', ':bancomatpay_sdk_ui_resources', ':bancomatpay_app'

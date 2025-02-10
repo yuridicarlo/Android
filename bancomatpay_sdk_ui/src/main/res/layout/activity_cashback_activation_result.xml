@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"
+		android:orientation="vertical">
+
+		<it.bancomatpay.sdkui.widgets.ToolbarSimple
+			android:id="@+id/toolbar_simple"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:visibility="invisible"
+			app:centerImg="@drawable/empty"
+			app:layout_constraintBottom_toTopOf="@id/title"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:leftImg="@drawable/back_blue" />
+
+		<TextView
+			android:id="@+id/title"
+			style="@style/TextGenericTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintBottom_toTopOf="@id/description" />
+
+		<TextView
+			android:id="@+id/description"
+			style="@style/TextDescriptionStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/activity_horizontal_margin"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="@dimen/activity_horizontal_margin"
+			android:layout_marginBottom="4dp"
+			android:lineSpacingMultiplier="1.2"
+			android:textColor="@color/text_color_bcm"
+			app:layout_constraintTop_toBottomOf="@id/title" />
+
+		<ImageView
+			android:id="@+id/image_result"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="25dp"
+			tools:src="@drawable/illustration_cashback_attivato_ok"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/description" />
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/close_button"
+			style="@style/CustomButtonRefuse"
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:layout_marginBottom="@dimen/size_10"
+			android:text="@string/cashback_not_enabled_close_button"
+			android:visibility="gone"
+			app:layout_constraintBottom_toTopOf="@id/button_go_to_app_IO"
+			app:layout_constraintLeft_toLeftOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/button_go_to_app_IO"
+			style="@style/CustomBigButton"
+			android:layout_marginBottom="20dp"
+			android:background="@drawable/button_round_background_state_list"
+			android:text="@string/cashback_app_IO_button"
+			android:visibility="gone"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintStart_toStartOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

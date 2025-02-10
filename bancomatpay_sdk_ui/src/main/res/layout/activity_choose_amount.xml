@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="false"
+        tools:context=".activities.ChooseAmountActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/generic_coloured_background">
+
+            <RelativeLayout
+                android:id="@+id/layout_merchant_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_merchant"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/image_background_merchant"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.47"
+                        android:scaleType="centerCrop"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.53" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/image_background_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/merchant_image_background_mask"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_left"
+                android:layout_marginBottom="-1dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.47">
+
+                    <it.bancomatpay.sdkui.widgets.ToolbarSimple
+                        android:id="@+id/toolbar_simple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="@dimen/status_bar_height"
+                        app:centerImg="@drawable/logo_bancomat"
+                        app:leftImg="@drawable/back_white" />
+
+                    <!--TabView-->
+                    <RelativeLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toolbar_simple">
+
+                        <ImageView
+                            android:id="@+id/tab_layout_line_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_alignBottom="@id/contact_tab_layout"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/tab_layout_line" />
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/contact_tab_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:background="@android:color/transparent"
+                            app:tabBackground="?attr/selectableItemBackground"
+                            app:tabGravity="fill"
+                            app:tabIndicatorColor="@color/white_background"
+                            app:tabIndicatorHeight="3dp"
+                            app:tabMode="fixed"
+                            app:tabSelectedTextColor="@color/white_background"
+                            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                            app:tabTextColor="@color/generic_coloured_background">
+
+                            <com.google.android.material.tabs.TabItem
+                                android:id="@+id/tab_Send_Money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tab_layout_send_money" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:id="@+id/tab_Get_Money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tab_layout_get_money" />
+
+                        </com.google.android.material.tabs.TabLayout>
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/payment_type_label"
+                        style="@style/ContactName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/toolbar_simple"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="16dp"
+                        android:visibility="invisible" />
+
+                    <!--Contact-->
+                    <RelativeLayout
+                        android:id="@+id/contact_consumer_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tab_layout"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="40dp"
+                        android:gravity="center"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_contact_consumer_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="@dimen/size_10">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/contact_consumer_image_profile_circle"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp" />
+
+                            <ImageView
+                                android:id="@+id/contact_consumer_image_profile"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:src="@drawable/profile_letter_circle_background" />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/contact_consumer_is_active"
+                            style="@style/SlidingPanelPriceStyle"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignRight="@id/layout_contact_consumer_image"
+                            android:layout_alignBottom="@id/layout_contact_consumer_image"
+                            android:gravity="center"
+                            android:src="@drawable/logo_rubrica" />
+
+                        <LinearLayout
+                            android:id="@+id/contact_consumer_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toEndOf="@id/layout_contact_consumer_image"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/contact_consumer_name"
+                                style="@style/ContactName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLength="25"
+                                android:maxLines="1"
+                                android:text="Claudio Consoniaaaaaaaaaaa" />
+
+                            <TextView
+                                android:id="@+id/contact_consumer_number"
+                                style="@style/ContactNameItemDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+39 3345680980" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/contact_consumer_letter"
+                            style="@style/ContactLetterPlaceholder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@id/layout_contact_consumer_image"
+                            android:layout_alignTop="@id/layout_contact_consumer_image"
+                            android:layout_alignEnd="@id/layout_contact_consumer_image"
+                            android:layout_alignBottom="@id/layout_contact_consumer_image"
+                            android:gravity="center"
+                            android:text="A"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_merchant_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/toolbar_simple"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/text_merchant_name"
+                            style="@style/TransactionDetailTextTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_8" />
+
+                        <TextView
+                            android:id="@+id/text_merchant_address"
+                            style="@style/TransactionDetailTextSubtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_25" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--Total-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="0.12"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.9"
+                        android:orientation="horizontal">
+
+                        <it.bancomatpay.sdkui.widgets.LabelPaymentAmount
+                            android:id="@+id/get_money_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            app:maxLength="9" />
+
+                        <ImageView
+                            android:id="@+id/cancel_button_insert_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="30dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="10dp"
+                            android:src="@drawable/cancel_bcm" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--Keyboard-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.41">
+
+                    <it.bancomatpay.sdkui.widgets.KeyboardCustom
+                        android:id="@+id/get_money_keyboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

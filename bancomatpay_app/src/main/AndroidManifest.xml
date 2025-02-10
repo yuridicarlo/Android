@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="it.bancomatpay.consumer">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+
+    <application
+        android:name="it.bancomat.pay.consumer.BancomatApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher_bcm"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_bcm_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup, android:fullBackupContent">
+
+        <activity
+            android:name="it.bancomat.pay.consumer.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreenTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                android:label="BANCOMAT Pay">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "https://p.bcmt.it/” -->
+                <data
+                    android:host="p.bcmt.it"
+                    android:pathPrefix="/"
+                    android:scheme="http" />
+                <!-- Accepts URIs that begin with "https://ba.empsa.org/” -->
+                <data
+                    android:host="ba.empsa.org"
+                    android:pathPrefix="/"
+                    android:scheme="http" />
+                <!-- the leading "/" is required for pathPrefix -->
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:windowSoftInputMode="adjustResize"
+            android:name="it.bancomat.pay.consumer.init.InitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoBcmPayUserActivity" />
+
+        <activity
+            android:windowSoftInputMode="adjustResize"
+            android:name="it.bancomat.pay.consumer.init.ActivationActivity"
+            android:theme="@style/AppThemeTransparent" />
+
+        <activity
+            android:name="it.bancomat.pay.consumer.activation.activities.NotBcmPayUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoBcmPayUserActivity" />
+        <activity
+            android:name="it.bancomat.pay.consumer.activation.activities.ActivableBankListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActivableBank" />
+        <activity
+            android:name="it.bancomat.pay.consumer.IntroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeIntro" />
+        <activity
+            android:name="it.bancomat.pay.consumer.activation.activities.ActivationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActivationActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="it.bancomat.pay.consumer.login.AuthenticationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin" />
+        <activity
+            android:name="it.bancomat.pay.consumer.login.LostPinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLostPin" />
+        <activity
+            android:name="it.bancomat.pay.consumer.activation.activities.ActivationCompletedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActivationCompleted" />
+        <activity
+            android:name="it.bancomat.pay.consumer.activation.activities.ActivationCompletedSdkErrorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActivationCompleted" />
+        <activity
+            android:name="it.bancomat.pay.consumer.activation.activities.NoBcmPayBankListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoBcmPayBankListActivity" />
+
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.PaymentPushLoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemePaymentDataLoading" />
+
+        <activity
+            android:name="it.bancomat.pay.consumer.utilities.activity.TransparentAuthenticationActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name="it.bancomat.pay.consumer.utilities.activity.BiometricAuthenticationActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name="it.bancomat.pay.consumer.activation.activities.SetFingerprintSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActivationCompleted" />
+        <activity
+            android:name="it.bancomat.pay.consumer.activation.activities.SetFingerprintActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActivationCompleted" />
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.HomeActivityExtended"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeHome" />
+
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.ContactsActivityExtended"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeHome" />
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.SupportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSupport" />
+        <activity
+            android:name="it.bancomat.pay.consumer.cj.CjConsentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSupport" />
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.SettingsActivityExtended"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSettings" />
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.SettingsSetFingerprintActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSettings" />
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.SettingsRemoveFingerprintActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSettings" />
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.SettingsForceLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSettings" />
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.SettingsChangePinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSettings" />
+
+        <activity
+            android:name="it.bancomat.pay.consumer.biometric.EnrollBiometricActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSettings" />
+
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.SettingsChangePinSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSettings" />
+        <activity
+            android:name="it.bancomat.pay.consumer.extended.activities.ProfileActivityExtended"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeProfile" />
+
+        <activity android:name="it.bancomat.pay.consumer.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoBcmPayUserActivity">
+
+        </activity>
+
+        <activity
+            android:name="it.bancomat.pay.consumer.storeLocator.StoreLocatorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppThemeStoreLocator" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ico_push" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccentBancomat" />
+
+        <receiver
+            android:name="it.bancomat.pay.consumer.activation.GoogleSmsBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="it.bancomat.pay.consumer.activation.HuaweiSmsBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.huawei.hms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="it.bancomat.pay.consumer.notification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="it.bancomat.pay.consumer.notification.MyHmsMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/FILE_PROVIDER_AUTHORITY"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name="it.bancomat.pay.consumer.cj.CustomerJourneyIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+    </application>
+
+    <queries>
+        <!-- Explicit apps you know in advance about: -->
+        <package android:name="org.telegram.messenger"/>
+    </queries>
+
+</manifest>

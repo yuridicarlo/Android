@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/main_title"
+            style="@style/TextGenericTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/tutorial_title_atm_cardless" />
+
+        <TextView
+            android:id="@+id/main_description"
+            style="@style/TextDescriptionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_below="@id/main_title"
+            android:text="@string/atm_cardless_info_description"
+            android:textColor="@color/text_color_bcm" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/button_next"
+            android:layout_below="@id/main_description"
+            android:layout_marginTop="@dimen/size_30"
+            android:layout_marginBottom="@dimen/size_30"
+            android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextTutorialDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:fontFamily="@font/lato_text_semibold"
+                android:text="@string/withdraw_tutorial_atm_label"
+                android:textColor="@color/text_color_bcm" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_14" />
+
+            <TextView
+                style="@style/TextDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/atm_cardless_info_subdescription"
+                android:textColor="@color/text_color_bcm" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="1."
+                    android:textColor="@color/text_color_bcm" />
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/atm_cardless_subdescription_item_1"
+                    android:textColor="@color/text_color_bcm" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="2."
+                    android:textColor="@color/text_color_bcm" />
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/atm_cardless_subdescription_item_2"
+                    android:textColor="@color/text_color_bcm" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="3."
+                    android:textColor="@color/text_color_bcm" />
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/atm_cardless_subdescription_item_3"
+                    android:textColor="@color/text_color_bcm" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="4."
+                    android:textColor="@color/text_color_bcm" />
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/atm_cardless_subdescription_item_4"
+                    android:textColor="@color/text_color_bcm" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pos_tutorial_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_30"
+                android:visibility="invisible"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextTutorialDescriptionStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:fontFamily="@font/lato_text_semibold"
+                    android:text="@string/withdraw_tutorial_pos_instruction_label"
+                    android:textColor="@color/text_color_bcm" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_14" />
+
+                <TextView
+                    style="@style/TextDescriptionStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/withdraw_tutorial_pos_instruction_title"
+                    android:textColor="@color/text_color_bcm" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="1."
+                        android:textColor="@color/text_color_bcm" />
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/withdraw_tutorial_pos_instruction_1"
+                        android:textColor="@color/text_color_bcm" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="2."
+                        android:textColor="@color/text_color_bcm" />
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/withdraw_tutorial_pos_instruction_2"
+                        android:textColor="@color/text_color_bcm" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="3."
+                        android:textColor="@color/text_color_bcm" />
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/withdraw_tutorial_pos_instruction_3"
+                        android:textColor="@color/text_color_bcm" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="4."
+                        android:textColor="@color/text_color_bcm" />
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/withdraw_tutorial_pos_instruction_4"
+                        android:textColor="@color/text_color_bcm" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="5."
+                        android:textColor="@color/text_color_bcm" />
+
+                    <TextView
+                        style="@style/TextDescriptionStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/withdraw_tutorial_pos_instruction_5"
+                        android:textColor="@color/text_color_bcm" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_next"
+            style="@style/CustomBigButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:text="@string/next_button" />
+
+    </RelativeLayout>
+
+</layout>

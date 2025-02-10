@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/button_multi_iban_next"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextGenericTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/bcmpay_activation_label" />
+
+            <TextView
+                style="@style/TextDescriptionStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="4dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/choose_iban_text"
+                android:textColor="@color/text_color_bcm" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/multi_iban_bank_list"
+                android:layout_marginTop="@dimen/size_78"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_multi_iban_next"
+            style="@style/CustomBigButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/go_to_next_step_button" />
+
+    </RelativeLayout>
+
+</layout>

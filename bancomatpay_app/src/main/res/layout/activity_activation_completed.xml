@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"
+		android:orientation="vertical">
+
+		<it.bancomatpay.sdkui.widgets.ToolbarSimple
+			android:id="@+id/toolbar_simple"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:centerImg="@drawable/ico_logo_bcm_rubrica" />
+
+		<TextView
+			style="@style/ListLabel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="@dimen/activity_horizontal_margin"
+			android:paddingRight="@dimen/activity_horizontal_margin"
+			android:text="@string/activation_completed_title" />
+
+		<TextView
+			style="@style/TextDescriptionStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:layout_marginBottom="4dp"
+			android:lineSpacingMultiplier="1.2"
+			android:paddingLeft="@dimen/activity_horizontal_margin"
+			android:paddingRight="@dimen/activity_horizontal_margin"
+			android:text="@string/activation_completed_description"
+			android:textColor="@color/text_generic_color" />
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_above="@id/layout_touch_id_label"
+				android:layout_alignParentTop="true"
+				android:scaleType="center"
+				android:src="@drawable/illustration_activation" />
+
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/button_go_to_home"
+				style="@style/CustomBigButton"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="@dimen/activity_vertical_margin"
+				android:text="@string/home" />
+
+			<LinearLayout
+				android:id="@+id/layout_touch_id_label"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_above="@id/button_go_to_home"
+				android:layout_marginBottom="45dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/text_activate_fingerprint_label"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/lato_text_regular"
+					android:lineSpacingMultiplier="1.2"
+					android:paddingLeft="@dimen/activity_horizontal_margin"
+					android:paddingRight="@dimen/activity_horizontal_margin"
+					android:text="@string/activate_fingerprint_label"
+					android:textColor="@color/text_generic_color"
+					android:textSize="16dp" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="12dp" />
+
+				<TextView
+					android:id="@+id/text_activate_fingerprint_action"
+					style="@style/TextActionLabelSemiBold"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?attr/selectableItemBackground"
+					android:clickable="true"
+					android:focusable="true"
+					android:fontFamily="@font/lato_text_semibold"
+					android:paddingLeft="@dimen/activity_horizontal_margin"
+					android:paddingTop="8dp"
+					android:paddingBottom="8dp"
+					android:textSize="14dp"
+					android:text="@string/activate_fingerprint_action" />
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</layout>

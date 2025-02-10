@@ -1,0 +1,10 @@
+{
+  "genericFlags": {
+    "needsCheckRoot": true,
+    "blockIfRooted": true,
+    "hideSpendingLimits": false
+  },
+  "androidFlags": {
+    "fileProviderAuthority": "it.bancomat.pay.consumer.fileprovider"
+  }
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_fingerprint_authentication_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/fingerprint_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fingerprint_for_popup" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_text_semibold"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="17dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:id="@+id/fingerprint_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_text_regular"
+            android:gravity="center"
+            android:lines="2"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/common_check_fingerprint_status_idle"
+            android:textColor="@android:color/black"
+            android:textSize="17dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:id="@+id/text_cancel_authentication"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/fingerprint_dialog_button_cancel_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/lato_text_semibold"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/colorAccentBancomat"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+
+</layout>

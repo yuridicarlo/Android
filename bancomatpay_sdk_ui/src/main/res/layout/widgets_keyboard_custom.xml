@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/keyboard_custom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:splitMotionEvents="false"
+        android:windowEnableSplitTouch="false">
+
+        <LinearLayout style="@style/WidgetsKeyboardRow">
+
+            <TextView
+                android:id="@+id/num_pad_key_1"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_one" />
+
+            <TextView
+                android:id="@+id/num_pad_key_2"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_two" />
+
+            <TextView
+                android:id="@+id/num_pad_key_3"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_three" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/WidgetsKeyboardRow">
+
+            <TextView
+                android:id="@+id/num_pad_key_4"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_four" />
+
+            <TextView
+                android:id="@+id/num_pad_key_5"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_five" />
+
+            <TextView
+                android:id="@+id/num_pad_key_6"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_six" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/WidgetsKeyboardRow">
+
+            <TextView
+                android:id="@+id/num_pad_key_7"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_seven" />
+
+            <TextView
+                android:id="@+id/num_pad_key_8"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_eight" />
+
+            <TextView
+                android:id="@+id/num_pad_key_9"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_nine" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/WidgetsKeyboardRow">
+
+            <TextView
+                android:id="@+id/num_pad_key_comma"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_comma" />
+
+
+            <TextView
+                android:id="@+id/num_pad_key_0"
+                style="@style/WidgetsKeyboardButtonSubmit"
+                android:text="@string/widgets_keyboard_pin_num_pad_zero" />
+
+            <RelativeLayout
+                android:id="@+id/num_pad_key_x"
+                style="@style/WidgetsKeyboardButton">
+
+                <ImageView
+                    android:id="@+id/keyboard_button_continue_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/keyboard_continue_off" />
+
+                <ImageView
+                    android:id="@+id/keyboard_button_continue_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/keyboard_continue_on"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

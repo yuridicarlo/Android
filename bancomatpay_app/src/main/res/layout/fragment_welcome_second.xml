@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="center">
+
+		<com.airbnb.lottie.LottieAnimationView
+			android:id="@+id/lottie_animation"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			app:layout_constraintBottom_toTopOf="@id/text_description"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintHeight_max="260dp"
+			app:layout_constraintHeight_percent=".7"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_chainStyle="packed"
+			app:layout_constraintVertical_weight="1"
+			app:lottie_fileName="@string/activation_anim_2"
+			app:lottie_loop="true" />
+
+		<TextView
+			android:id="@+id/text_description"
+			style="@style/HomeServicesTextLabel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="@dimen/activity_horizontal_margin"
+			android:paddingRight="@dimen/activity_horizontal_margin"
+			android:text="@string/view_pager_2"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/lottie_animation"
+			app:layout_constraintVertical_chainStyle="packed"
+			app:layout_constraintVertical_weight="1" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

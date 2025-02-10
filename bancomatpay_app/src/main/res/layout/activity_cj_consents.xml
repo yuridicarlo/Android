@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <it.bancomatpay.sdkui.widgets.ToolbarSimple
+            android:id="@+id/toolbar_simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerImg="@drawable/logo_bancomat_blue"
+            app:leftImg="@drawable/back_blue" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextGenericTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_simple"
+            android:text="@string/consents_privacy" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/TextDescriptionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:lineSpacingMultiplier="1.2"
+            android:text="Prendendo atto dell'informativa e autorizzando la profilazione dei tuoi dati contribuirai al miglioramento dell\'app BANCOMAT Pay"
+            android:textColor="@color/text_color_bcm"
+            android:textColorLink="@color/colorAccent" />
+
+        <ScrollView
+            android:id="@+id/scroll_view_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_above="@+id/cj_text_profile"
+            android:layout_marginBottom="@dimen/size_25"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_consents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_33"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/layout_separator_header_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/text_settings_separator_header"
+                        app:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <it.bancomatpay.sdkui.widgets.CJSeparatorHeader
+                                android:id="@+id/cj_separator_header"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintHorizontal_chainStyle="spread"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:title_cj="@string/first_consent_label" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_compat_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="@+id/cj_separator_header"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/cj_separator_header" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_marketing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_12"
+                        android:layout_marginBottom="@dimen/size_25"
+                        android:background="?attr/selectableItemBackground"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/consent_box"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_20"
+                            android:layout_marginRight="@dimen/size_60"
+                            android:orientation="vertical"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                style="@style/CJConsentSublabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:justificationMode="inter_word"
+                                android:text="@string/first_consent_sublabel" />
+
+                            <net.cachapa.expandablelayout.ExpandableLayout
+                                android:id="@+id/marketing_expandable_layout_consent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:el_duration="200"
+                                app:el_expanded="false"
+                                app:el_parallax="1"
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                <TextView
+                                    android:id="@+id/marketing_text_description"
+                                    style="@style/CJConsentDescription"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:justificationMode="inter_word"
+                                    android:lineSpacingMultiplier="1.2"/>
+
+
+                            </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/marketing_arrow_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginRight="@dimen/size_30"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/size_8"
+                            android:src="@drawable/arrow_down_web"
+                            app:layout_constraintBottom_toBottomOf="@+id/consent_box"
+                            app:layout_constraintEnd_toEndOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/layout_separator_header_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/text_settings_separator_header"
+                        app:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <it.bancomatpay.sdkui.widgets.CJSeparatorHeader
+                                android:id="@+id/cj_separator_header_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintHorizontal_chainStyle="spread"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:title_cj="@string/second_consent_label" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_compat_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="@+id/cj_separator_header_2"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/cj_separator_header_2" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_profiling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_12"
+                        android:layout_marginBottom="@dimen/size_25"
+                        android:background="?attr/selectableItemBackground"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/profiling_consent_box"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_20"
+                            android:layout_marginRight="@dimen/size_60"
+                            android:orientation="vertical"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                style="@style/CJConsentSublabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:justificationMode="inter_word"
+                                android:text="@string/second_consent_sublabel" />
+
+                            <net.cachapa.expandablelayout.ExpandableLayout
+                                android:id="@+id/profiling_expandable_layout_consent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:weightSum="1"
+                                app:el_duration="200"
+                                app:el_expanded="false"
+                                app:el_parallax="1">
+
+                                <TextView
+                                    android:id="@+id/profiling_text_description"
+                                    style="@style/CJConsentDescription"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:justificationMode="inter_word"
+                                    android:lineSpacingMultiplier="1.2" />
+
+
+                            </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/profiling_arrow_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginRight="@dimen/size_30"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/size_8"
+                            android:src="@drawable/arrow_down_web"
+                            app:layout_constraintBottom_toBottomOf="@+id/profiling_consent_box"
+                            app:layout_constraintEnd_toEndOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/layout_separator_header_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/text_settings_separator_header"
+                        app:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <it.bancomatpay.sdkui.widgets.CJSeparatorHeader
+                                android:id="@+id/cj_separator_header_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintHorizontal_chainStyle="spread"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:title_cj="@string/third_consent_label" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_compat_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                app:layout_constraintBottom_toBottomOf="@+id/cj_separator_header_3"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/cj_separator_header_3" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_data_to_third_parties"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_12"
+                        android:layout_marginBottom="@dimen/size_25"
+                        android:background="?attr/selectableItemBackground"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/data_to_third_parties_consent_box"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_20"
+                            android:layout_marginRight="@dimen/size_60"
+                            android:layout_marginBottom="@dimen/size_8"
+                            android:paddingBottom="@dimen/size_8"
+                            android:orientation="vertical"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                style="@style/CJConsentSublabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:justificationMode="inter_word"
+                                android:text="@string/third_consent_sublabel"/>
+
+                            <net.cachapa.expandablelayout.ExpandableLayout
+                                android:id="@+id/data_to_third_parties_expandable_layout_consent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:el_duration="200"
+                                app:el_expanded="false"
+                                app:el_parallax="1"
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                <TextView
+                                    android:id="@+id/data_to_third_parties_text_description"
+                                    style="@style/CJConsentDescription"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:justificationMode="inter_word"
+                                    android:lineSpacingMultiplier="1.2" />
+
+
+                            </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/data_to_third_partiesg_arrow_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginRight="@dimen/size_30"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/size_8"
+                            android:src="@drawable/arrow_down_web"
+                            app:layout_constraintBottom_toBottomOf="@+id/data_to_third_parties_consent_box"
+                            app:layout_constraintEnd_toEndOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/cj_text_profile"
+            style="@style/CJConsentDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/confirm_button"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/size_33"
+            android:gravity="center_horizontal"
+            android:text="@string/profile_consents_indication"
+            android:textColor="@color/text_color_name_generic"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_button"
+            style="@style/CustomBigButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_33"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/confirm" />
+
+    </RelativeLayout>
+
+</layout>

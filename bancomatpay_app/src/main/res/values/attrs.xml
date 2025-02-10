@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PasswordViewLogin">
+        <attr name="imageEmptySrc" format="integer" />
+        <attr name="imageFullSrc" format="integer" />
+        <attr name="imagePadding" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="left|center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="4dp"
+    android:paddingBottom="4dp"
+    android:paddingRight="4dp">
+
+    <ImageView
+        android:id="@+id/image_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        />
+
+    <TextView
+        android:id="@+id/text_prefix_value"
+        style="@style/LabelTelephone"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/colorAccentBancomat" />
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_prefix_header"
+        style="@style/LabelTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_light_color" />
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

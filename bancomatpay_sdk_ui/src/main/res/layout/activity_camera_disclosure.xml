@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/generic_coloured_background"
+        android:fitsSystemWindows="false"
+        tools:context="it.bancomatpay.sdkui.activities.disclosure.PermissionDisclosureActivity">
+
+        <it.bancomatpay.sdkui.widgets.VerticalScrollView
+            android:id="@+id/vertical_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:isScrollContainer="true"
+            android:overScrollMode="never"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@id/btn_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/background_center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/layout_bottom"
+                    app:layout_constraintHeight_percent=".53"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <it.bancomatpay.sdkui.widgets.ToolbarSimple
+                        android:id="@+id/toolbar_simple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/status_bar_height"
+                        app:centerImg="@drawable/logo_bancomat"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/toolbar_simple"
+                        app:layout_constraintVertical_bias="0.308">
+
+                        <ImageView
+                            android:id="@+id/img_type_disclosure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/text_type_disclosure"
+                            style="@style/InAppDisclosureTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_25"/>
+
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.47"
+                    app:layout_constraintTop_toBottomOf="@id/layout_top">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/size_14"
+                        android:layout_marginTop="@dimen/size_17"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/DisclosureDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/disclosure_subtitle" />
+
+                        <TextView
+                            android:id="@+id/text_disclosure_title"
+                            style="@style/DisclosureDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:textStyle="bold"
+                            android:text="@string/camera_disclosure_subtitle" />
+
+
+                        <TextView
+                            android:id="@+id/text_disclosure_type_description"
+                            style="@style/DisclosureDesc"
+                            android:layout_marginTop="@dimen/size_25"
+                            android:layout_marginHorizontal="@dimen/size_38"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingMultiplier="1.2"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </it.bancomatpay.sdkui.widgets.VerticalScrollView>
+
+        <View
+            android:id="@+id/space_guideline_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="21dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/space_guideline_bottom" />
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_background"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vertical_scrollview">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/refuse_button"
+                style="@style/CustomButtonRefuse"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/disclosure_btn_not_now" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_12" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/confirm_button"
+                style="@style/CustomBigButton"
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/disclosure_btn_allow" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

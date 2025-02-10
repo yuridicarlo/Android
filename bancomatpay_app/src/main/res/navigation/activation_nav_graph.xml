@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activation_nav_graph"
+    app:startDestination="@id/insertActivationCodeFragment">
+
+    <fragment
+        android:id="@+id/insertActivationCodeFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.activation.InsertActivationCodeFragment"
+        android:label="fragment_insert_activation_code"
+        tools:layout="@layout/fragment_insert_activation_code" >
+        <action
+            android:id="@+id/action_insertActivationCodeFragment_to_insertOtpCodeFragment"
+            app:destination="@id/insertOtpCodeFragment" />
+        <action
+            android:id="@+id/action_insertActivationCodeFragment_to_scanQrCodeFragment"
+            app:destination="@id/scanQrCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activationCompletedFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.activation.ActivationCompletedFragment"
+        android:label="fragment_activation_completed"
+        tools:layout="@layout/fragment_activation_completed" />
+    <fragment
+        android:id="@+id/insertOtpCodeFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.activation.InsertOtpCodeFragment"
+        android:label="fragment_insert_otp_code"
+        tools:layout="@layout/fragment_insert_otp_code" >
+        <action
+            android:id="@+id/action_insertOtpCodeFragment_to_activationCompletedFragment"
+            app:destination="@id/activationCompletedFragment" />
+        <action
+            android:id="@+id/action_insertOtpCodeFragment_to_activationErrorFragment"
+            app:destination="@id/activationErrorFragment" />
+        <action
+            android:id="@+id/action_insertOtpCodeFragment_to_selectIbanFragment"
+            app:destination="@id/selectIbanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activationErrorFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.activation.ActivationErrorFragment"
+        android:label="fragment_activation_error"
+        tools:layout="@layout/fragment_activation_error" >
+        <action
+            android:id="@+id/action_activationErrorFragment_to_activationCompletedFragment"
+            app:destination="@id/activationCompletedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectIbanFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.activation.SelectIbanFragment"
+        android:label="SelectIbanFragment"
+        tools:layout="@layout/fragment_select_iban">
+        <action
+            android:id="@+id/action_selectIbanFragment_to_activationErrorFragment"
+            app:destination="@id/activationErrorFragment" />
+        <action
+            android:id="@+id/action_selectIbanFragment_to_activationCompletedFragment"
+            app:destination="@id/activationCompletedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanQrCodeFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.activation.ScanQrCodeFragment"
+        android:label="fragment_scan_qr_code"
+        tools:layout="@layout/fragment_scan_qr_code" >
+        <action
+            android:id="@+id/action_scanQrCodeFragment_to_insertOtpCodeFragment"
+            app:destination="@id/insertOtpCodeFragment" />
+    </fragment>
+</navigation>

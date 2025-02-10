@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="SpUsage">
+
+    <style name="AppThemeSdkUi" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimaryBancomat</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@android:color/white</item>
+
+        <item name="android:dialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:buttonBarButtonStyle">@style/DialogButton</item>
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppThemeSdkUiNoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimaryBancomat</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+
+        <item name="android:dialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:buttonBarButtonStyle">@style/DialogButton</item>
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/white_background</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
+    </style>
+
+    <style name="CashBackAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/dialog_cashback_background</item>
+        <item name="colorBackgroundFloating">@color/colorAccent</item>
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textColorPrimary">@color/white_background</item>
+        <item name="background">@color/colorAccent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="DialogButton" parent="Widget.MaterialComponents.Button.TextButton" />
+
+    <style name="AppThemeHome" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@color/blue_status_bar</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+
+        <item name="popupMenuStyle">@style/HomePopupMenu</item>
+        <item name="textAppearanceLargePopupMenu">@style/HomeTextPopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">@style/HomeTextPopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/HomePopupDropdownList</item>
+    </style>
+
+    <style name="AppThemeSendMoney" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeMerchantList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeTransactionList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeDirectDebitMerchantList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeCashbackDigitalPayments" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeCashbackDetail" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeCashbackFullScreen" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePaymentAcceptance" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeProfile" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePaymentDataLoading" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePosWithdrawalDataLoading" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeTransactionDetail" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeDirectDebitMerchantDetail" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeChooseAmount" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeResultSendMoney" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeConfirmSendMoney" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeSettings" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAccountsManagement" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeSpendingLimits" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeNotifications" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBlockedContacts" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeLoyaltyCard" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeLoyaltyCardDetail" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+        <item name="popupMenuStyle">@style/CardDetailPopupMenu</item>
+        <item name="textAppearanceLargePopupMenu">@style/HomeTextPopupCardDetail</item>
+        <item name="textAppearanceSmallPopupMenu">@style/HomeTextPopupCardDetail</item>
+        <item name="android:dropDownListViewStyle">@style/CardDetailPopupDropdownList</item>
+    </style>
+
+    <style name="AppThemeLoyaltyCardList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBrandedCardList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeCaptureLoyaltyCard" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAddLoyaltyCardManually" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAddLoyaltyCardImage" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeDocumentList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+        <item name="popupMenuStyle">@style/DocumentsPopupMenu</item>
+        <item name="textAppearanceLargePopupMenu">@style/DocumentTextPopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">@style/DocumentTextPopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/DocumentPopupDropdownList</item>
+    </style>
+
+    <style name="AppThemeAddDocument" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAddDocumentImage" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeSaveDocumentImage" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeScanFiscalCode" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBankIdInfo" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBankIdAnagraphic" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBankIdAddAddress" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBankIdAuthorization" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBankIdAccessList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeDirectDebitAuthorization" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBlockedMerchantList" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePetrolChoosePump" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePetrolChooseAmount" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePetrolResult" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBPlay" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeBankServiceTutorial" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAtmCardlessScanQrCode" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeAtmCardlessChooseAmount" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+
+    </style><style name="AppThemePosWithdrawalOperationResult" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="Line1dp">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="Line2dp">
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="LineG1" parent="Line1dp">
+        <item name="android:background">@color/grey</item>
+        <item name="android:alpha">.6</item>
+    </style>
+
+    <style name="ToolbarSimpleTitle" parent="TextSemiBold">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/text_color_bcm</item>
+    </style>
+
+    <style name="EmptyListText" parent="TextRegular">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/payment_total_label_payment</item>
+    </style>
+
+    <style name="RubricCancelTextTitle" parent="TextRegular">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/text_color_bcm</item>
+    </style>
+
+    <style name="TextHomePaymentAmount" parent="TextMedium">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/text_color_bcm</item>
+    </style>
+
+    <style name="WidgetsKeyboardRow">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="WidgetsKeyboardButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="WidgetsKeyboardButtonRipple" parent="WidgetsKeyboardButton">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="WidgetsKeyboardButtonSubmit" parent="WidgetsKeyboardButtonRipple">
+        <item name="android:fontFamily">@font/lato_text_regular</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/text_generic_color</item>
+    </style>
+
+    <style name="WidgetsKeyboardButtonSubmitRipple" parent="WidgetsKeyboardButtonRipple">
+        <item name="android:fontFamily">@font/lato_text_regular</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/text_color_bcm</item>
+        <item name="background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="TextErrorLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_error_color</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="MovementsProfileGeneralNameText" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_color_bcm</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="MovementsProfileGeneralHideNameText" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_hint</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+
+    <style name="MovementsProfileGeneralPhoneText" parent="TextMedium">
+        <item name="android:textColor">@color/text_color_hint</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="MovementsProfileGeneralImageText" parent="TextMedium">
+        <item name="android:textColor">@color/text_color_bcm</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="SlidingPanelNoImageTextStyle" parent="TextSemiBold">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MovementsProfileGeneralAddress" parent="TextMedium">
+        <item name="android:textColor">@color/text_color_hint</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="OutcomeFragmentPriceText" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_color_bcm</item>
+        <item name="android:textSize">26dp</item>
+    </style>
+
+    <style name="SendMoneyLabelText" parent="TextMedium">
+        <item name="android:textColor">@color/text_color_hint</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="HomeTextQrCodeLabel" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="HomeItemLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+
+    <style name="AmountLabel" parent="TextRegular">
+        <item name="android:textColor">@color/payment_total_label_payment_inserted</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="DisclosureDesc" parent="TextRegular">
+        <item name="android:textColor">@color/payment_total_label_payment_inserted</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="MessageLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="MessageText" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="ButtonText" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="KnownBrandCardNameText" parent="TextSemiBold">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="KnownBrandCardNameDetailText" parent="TextSemiBold">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="UnknownBrandCardNameText" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CustomBigButton" parent="TextRegular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/button_round_background_state_list</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="android:stateListAnimator" tools:targetApi="lollipop">@null</item>
+    </style>
+
+    <style name="CustomButtonTermsAndConditions" parent="TextRegular">
+        <item name="android:layout_height">@dimen/size_50</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/size_24</item>
+    </style>
+
+    <style name="CustomActivationButton" parent="TextRegular">
+        <item name="android:background">@drawable/button_round_background_state_list</item>
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="CustomBankDiscoveryButton" parent="TextSemiBold">
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="CustomBigButtonSquared" parent="TextRegular">
+        <item name="android:background">@drawable/button_square_background_state_list</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="CustomButtonRefuse" parent="TextRegular">
+        <item name="android:background">@drawable/button_round_refuse_background</item>
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+  <style name="CustomButtonSaveNumber" parent="TextBold">
+        <item name="android:background">@drawable/bottone_salva_rubrica</item>
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="CustomButtonRefuseSmall" parent="TextRegular">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="CustomButtonGetMoney" parent="TextRegular">
+        <item name="android:background">@drawable/button_round_oneshot_background</item>
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="CustomButtonBankServices" parent="TextRegular">
+        <item name="android:background">@drawable/button_round_refuse_background</item>
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="ErrorTextMessage" parent="TextRegular">
+        <item name="android:background">@drawable/button_round_refuse_background</item>
+        <item name="android:textColor">@color/text_error_color</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="AddDateToCalendarText" parent="TextSemiBold">
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextActionLabel" parent="TextRegular">
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="AmountText" parent="TextRegular">
+        <item name="android:textColor">@color/payment_total_label_payment_inserted</item>
+        <item name="android:textSize">35dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="LocalAmountAndCurrencyText" parent="TextSemiBold">
+        <item name="android:textColor">@color/payment_total_label_payment_inserted</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="HomeServicesTextLabel" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="HomePlafondTextTitle" parent="TextRegular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="HomeButtonPayInStores" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+    </style>
+
+    <style name="HomePlafondTextError" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="HomePlafondTextLabel" parent="TextSemiBold">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="HomePopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:overlapAnchor" tools:targetApi="lollipop">true</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+        <item name="android:dropDownVerticalOffset">0dp</item>
+    </style>
+
+    <style name="StoreLocatorPermissionsTitle" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_color_name_generic</item>
+    </style>
+
+    <style name="StoreLocatorPermissionsDescription" parent="TextRegular">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_color_name_generic</item>
+    </style>
+
+    <style name="CardDetailPopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:overlapAnchor" tools:targetApi="lollipop">true</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+        <item name="android:dropDownVerticalOffset">0dp</item>
+    </style>
+
+    <style name="DocumentsPopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:overlapAnchor" tools:targetApi="lollipop">true</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+        <item name="android:dropDownVerticalOffset">0dp</item>
+    </style>
+
+    <style name="HomeTextPopupMenu" parent="TextRegular">
+        <item name="android:textColor">@color/text_menu_item</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="DocumentTextPopupMenu" parent="TextRegular">
+        <item name="android:textColor">@color/text_menu_item</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="HomeTextPopupCardDetail" parent="TextRegular">
+        <item name="android:textColor">@color/text_menu_item</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="HomePopupDropdownList" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/menu_divider_color</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="DocumentPopupDropdownList" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/menu_divider_color</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="CardDetailPopupDropdownList" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/menu_divider_color</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="SendMoneyText" parent="TextSemiBold">
+        <item name="android:textColor">@color/payment_total_label_payment</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="ListLabel" parent="TextSemiBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="TextTitleWhite" parent="TextSemiBold">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="TextSubtitleWhite" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="LabelPrefix" parent="TextSemiBold">
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:colorControlHighlight" tools:targetApi="lollipop">
+            @color/ripple_color_dark
+        </item>
+        <item name="colorControlHighlight" tools:targetApi="lollipop">@color/ripple_color_dark
+        </item>
+    </style>
+
+    <style name="LabelTelephone" parent="TextRegular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_dropdown_background</item>
+    </style>
+
+    <style name="PaymentTypeLabel" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ContactListItemTitle" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_color_name_generic</item>
+    </style>
+
+    <style name="DirectDebitListItemTitle" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_color_name_generic</item>
+    </style>
+
+    <style name="ContactName" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DirectDebitMerchantName" parent="TextSemiBold">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ContactNameHiddenText" parent="TextRegular">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/hidden_contact_name</item>
+    </style>
+
+    <style name="NotificationContactListItemDescription" parent="TextSemiBold">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/text_light_color</item>
+    </style>
+
+    <style name="ContactListItemDescription" parent="TextRegular">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/text_light_color</item>
+    </style>
+
+    <style name="ContactNameItemDescription" parent="TextRegular">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="SendMoneyOperationTypeLabel" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="SlidingPanelPriceStyle" parent="TextSemiBold">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/green_style</item>
+    </style>
+
+    <style name="SlidingPanelTitleStyle" parent="TextSemiBold">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/text_color_bcm</item>
+    </style>
+
+    <style name="SlidingPanelLabelStyle" parent="TextRegular">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/text_color_hint</item>
+    </style>
+
+    <style name="TextDescriptionStyle" parent="TextMedium">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_color_hint</item>
+    </style>
+
+    <style name="TextTutorialDescriptionStyle" parent="TextBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextListLabelStyle" parent="TextMedium">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="AccountsManagementListHeader" parent="TextSemiBold">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/text_generic_color</item>
+    </style>
+
+    <style name="AccountsManagementIbanText" parent="TextRegular">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_generic_color</item>
+    </style>
+
+    <style name="ContactListLetterPlaceholderColoured" parent="TextRegular">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/generic_coloured_background</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ContactListLetterPlaceholderWhite" parent="TextLight">
+        <item name="android:textSize">33dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ContactLetterPlaceholder" parent="TextSemiBold">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/profile_text_letter_color</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MenuLetterPlaceholderWhite" parent="TextLight">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CustomButton" parent="TextRegular">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CustomTabView" parent="Widget.Design.TabLayout">
+
+    </style>
+
+    <style name="ProfileTextLetter" parent="TextLight">
+        <item name="android:textColor">@color/profile_text_letter_color</item>
+        <item name="android:textSize">45dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProfileTextName" parent="TextSemiBold">
+        <item name="android:textColor">@color/profile_text_letter_color</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProfileTextNumber" parent="TextRegular">
+        <item name="android:textColor">@color/profile_text_letter_color</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProfileTextActionLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">start|center</item>
+    </style>
+
+    <style name="TextBottomsheetTitle" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="TextBottomsheetLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="TextMenuProfileName" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextMenuProfileLabel" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/white_alpha</item>
+    </style>
+
+    <style name="TextMenuBoxLabel" parent="TextRegular">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:gravity">center</item>
+        <item name="singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextGenericTitle" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="TextGenericTitleLight" parent="TextSemiBold">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="TextGenericSubtitle" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="TextSettingsLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:gravity">center|start</item>
+    </style>
+
+    <style name="SpendingLimitsProgressTitle" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">start|left</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="ProgressBarSpendingLimitsGenericLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="ProgressBarSpendingLimitsBigPriceLabel" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="TextTransactionPrice" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextTrailing" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextDirectDebitMerchantStatus" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextTransactionPriceOneShot" parent="TextSemiBold">
+        <item name="android:textColor">@color/transactions_money_received</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextTransactionsSeparator" parent="TextRegular">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/text_light_color</item>
+    </style>
+
+    <style name="TransactionDetailTextTitle" parent="TextSemiBold">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TransactionDetailTextSubtitle" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TransactionDetailTextStatus" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TransactionDetailTextPrice" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:textSize">35dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TransactionDetailTextDate" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TransactionFee" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TransactionDetailTextLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="DirectDebitTextLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="DirectDebitTypeLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="TransactionDetailTextValue" parent="TextRegular">
+        <item name="android:textColor">@color/text_color_name_generic</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="MerchantLocationDialogTitle" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MerchantLocationDialogSubtitle" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TransactionReceiptTitle" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TransactionReceiptName" parent="TextSemiBold">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/text_generic_color</item>
+    </style>
+
+    <style name="TransactionReceiptDescription" parent="TextRegular">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/text_generic_color</item>
+    </style>
+
+    <style name="TextMerchantDistance" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextAddCardImageLabel" parent="TextRegular">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="TextAtmSelectedAmount" parent="TextSemiBold">
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+    </style>
+
+    <style name="TextAtmItemAmount" parent="TextSemiBold">
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="BottomSheetCustom" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/white
+        </item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="InsertCardLabel" parent="TextSemiBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="BrandedCardPlaceholder" parent="TextSemiBold">
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextPreauthorizationNotificationLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.CameraView" parent="android:Widget">
+        <item name="android:adjustViewBounds">false</item>
+        <item name="facing">back</item>
+        <item name="aspectRatio">4:3</item>
+        <item name="autoFocus">true</item>
+        <item name="flash">auto</item>
+    </style>
+
+    <style name="ThemeFullScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryBancomat</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+        <item name="android:colorControlHighlight" tools:targetApi="lollipop">
+            @color/ripple_color_dark
+        </item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/white
+        </item>
+    </style>
+
+    <style name="AddDocumentPhotoLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextOtherDocumentTitle" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_other_document_title_color</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAnagraphicLabel" parent="TextSemiBold">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="TextAnagraphicSublabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="TextAddressCardLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="CheckBoxBankIdAddress" parent="TextRegular">
+        <item name="android:textColor">@color/text_generic_color</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextBankIdAddressListEmpty" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextWithdrawalOperationTitle" parent="TextSemiBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">21dp</item>
+    </style>
+
+    <style name="TextWithdrawalOperationSubtitle" parent="TextRegular">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="TextPumpListItemNumber" parent="TextRegular">
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextPetrolSelectedAmount" parent="TextSemiBold">
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+    </style>
+
+    <style name="TextPetrolTitle" parent="TextSemiBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">21dp</item>
+    </style>
+
+    <style name="TextPetrolSubtitle" parent="TextRegular">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="TextPetrolItemAmount" parent="TextSemiBold">
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="TextBottomNavigation" parent="TextRegular">
+        <item name="android:textSize">11dp</item>
+    </style>
+
+    <style name="CJSeparatorHeader" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_color_name_generic</item>
+    </style>
+
+    <style name="CJConsentSublabel" parent="TextSemiBold">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:gravity">center|start</item>
+    </style>
+
+    <style name="CJConsentDescription" parent="TextRegular">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:gravity">center|start</item>
+    </style>
+
+    <style name="NotificationItemExpirationText" parent="TextSemiBold">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="SendMoneyToNewContactLabel" parent="TextSemiBold">
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/text_color_name_generic</item>
+    </style>
+
+    <style name="CashBackRankingTitle" parent="TextMedium">
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="InAppDisclosureTitle" parent="TextBold">
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textSize">@dimen/size_25</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CashBackRankingAmount" parent="TextMedium">
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textSize">35dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CashBackRankingNumbers" parent="TextSemiBold">
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+        <item name="android:textSize">21dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CashBackTCTitle" parent="TextSemiBold">
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="CashbackDialogTitle" parent="TextSemiBold">
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textSize">16dp</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="CashbackDialogDesc" parent="TextRegular">
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="CashbackDialogBtn" parent="TextSemiBold">
+        <item name="android:textColor">@color/white_background</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+    </style>
+
+    <style name="BottomSheetDialogCustomStyle" parent="@style/Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Demo.BottomSheet</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/white
+        </item>
+    </style>
+
+    <style name="Widget.Demo.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Demo</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Demo" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <style name="AppThemeInAppDisclosure" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeSplitBill" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="NoConsentsGivenInContact" parent="TextBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color_bcm</item>
+    </style>
+
+    <style name="NoConsentsGivenInContactDesc" parent="TextRegular">
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color_bcm</item>
+    </style>
+
+    <style name="BplayTextTooltipStyle" parent="TextSemiBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+    </style>
+
+    <style name="mapText" parent="TextBold">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/generic_coloured_background</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="link">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/generic_coloured_background</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="errorField" parent="TextBold">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/form_field_error_color</item>
+    </style>
+
+
+</resources>

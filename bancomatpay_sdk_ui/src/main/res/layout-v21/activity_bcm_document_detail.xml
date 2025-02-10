@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".activities.documents.DocumentDetailActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/generic_coloured_background">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.23"
+                        android:gravity="bottom">
+
+                        <ImageView
+                            android:id="@+id/image_document_placeholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/text_document_name"
+                            style="@style/TextOtherDocumentTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/image_document_placeholder"
+                            android:layout_alignBottom="@id/image_document_placeholder"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/other_document_default_title"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.77" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="-1dp"
+                    android:background="@drawable/background_center_high"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.21" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".79"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/tab_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1.5dp"
+                                android:layout_alignBottom="@id/document_tabs"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginRight="18dp"
+                                android:src="@drawable/tab_layout_line_grey" />
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/document_tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginRight="18dp"
+                                android:background="@android:color/transparent"
+                                app:tabBackground="?attr/selectableItemBackground"
+                                app:tabGravity="fill"
+                                app:tabIndicatorColor="@color/generic_coloured_background"
+                                app:tabIndicatorHeight="3dp"
+                                app:tabMode="fixed"
+                                app:tabSelectedTextColor="@color/generic_coloured_background"
+                                app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                                app:tabTextColor="@color/tab_unselected_text">
+
+                                <com.google.android.material.tabs.TabItem
+                                    android:id="@+id/tab_document_data"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/documents_add_document_tab_data" />
+
+                                <com.google.android.material.tabs.TabItem
+                                    android:id="@+id/tab_document_photo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/documents_add_document_tab_photo" />
+
+                            </com.google.android.material.tabs.TabLayout>
+
+                        </RelativeLayout>
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/document_viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="12dp"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <it.bancomatpay.sdkui.widgets.ToolbarSimple
+                    android:id="@+id/toolbar_simple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:leftImg="@drawable/back_white"
+                    app:centerImg="@drawable/logo_bancomat"
+                    app:rightImg="@drawable/trash" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

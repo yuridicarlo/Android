@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/consumer_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_95"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white_background"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_image_profile"
+                android:layout_width="@dimen/contact_list_circle_placeholder"
+                android:layout_height="@dimen/contact_list_circle_placeholder"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/size_10"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/contact_consumer_image_profile"
+                    android:layout_width="@dimen/contact_list_circle_placeholder"
+                    android:layout_height="@dimen/contact_list_circle_placeholder"
+                    android:src="@drawable/placeholder_merchant" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/direct_debit_status"
+                style="@style/TextDirectDebitMerchantStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textAllCaps="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="11dp"
+                android:text="ATTIVO" />
+
+            <LinearLayout
+                android:id="@+id/merchant_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@id/direct_debit_status"
+                android:layout_toEndOf="@id/layout_image_profile"
+                android:gravity="center|start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/direct_debit_merchant_name"
+                    style="@style/DirectDebitListItemTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/size_7"
+                    android:text="Mediaworld" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/direct_debit_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/size_7"
+                        android:layout_marginLeft="@dimen/size_7"
+                        android:src="@drawable/movimenti_addebito" />
+
+                    <TextView
+                        android:id="@+id/direct_debit"
+                        style="@style/ContactListItemDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/direct_debit_label" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

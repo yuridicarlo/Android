@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item
+            android:id="@+id/menu_documents_carta_identita_cartacea"
+            android:title="@string/popup_menu_voice_1"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/menu_documents_carta_identita_elettronica"
+            android:title="@string/popup_menu_voice_2"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/menu_documents_tessera_sanitaria"
+            android:title="@string/popup_menu_voice_3"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/menu_documents_patente"
+            android:title="@string/popup_menu_voice_4"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/menu_documents_passaporto"
+            android:title="@string/popup_menu_voice_5"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/menu_documents_other"
+            android:title="@string/popup_menu_voice_6"
+            app:showAsAction="never" />
+    </group>
+
+</menu>

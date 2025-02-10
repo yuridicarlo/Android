@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/init_nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_activableBankListFragment"
+            app:destination="@id/activableBankListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goToHomeBankingFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.GoToHomeBankingFragment"
+        android:label="fragment_go_to_home_banking"
+        tools:layout="@layout/fragment_go_to_home_banking" />
+    <fragment
+        android:id="@+id/activableBankListFragment"
+        android:name="it.bancomat.pay.consumer.init.fragment.ActivableBankListFragment"
+        android:label="ActivableBankListFragment"
+        tools:layout="@layout/fragment_activable_bank_list">
+        <action
+            android:id="@+id/action_activableBankListFragment_to_goToHomeBankingFragment"
+            app:destination="@id/goToHomeBankingFragment" />
+    </fragment>
+</navigation>

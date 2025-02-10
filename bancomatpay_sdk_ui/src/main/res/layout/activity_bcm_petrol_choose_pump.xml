@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/generic_coloured_background"
+        android:fitsSystemWindows="false"
+        android:orientation="vertical"
+        tools:context=".activities.petrol.PetrolChoosePumpActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/generic_coloured_background">
+
+            <RelativeLayout
+                android:id="@+id/layout_merchant_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_merchant"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/image_background_merchant"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.47"
+                        android:scaleType="centerCrop"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.53" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/image_background_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/merchant_image_background_mask"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="-1dp"
+                android:layout_marginBottom="-1dp"
+                android:background="@drawable/background_left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.47">
+
+					<it.bancomatpay.sdkui.widgets.ToolbarSimple
+						android:id="@+id/toolbar_simple"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentTop="true"
+						android:layout_marginTop="@dimen/status_bar_height"
+						app:leftImg="@drawable/back_white"
+						app:centerImg="@drawable/logo_bancomat"
+						app:rightImg="@drawable/info_ico_white" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_merchant_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/toolbar_simple"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/text_petrol_name"
+                            style="@style/TransactionDetailTextTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Stazione di servizio Guerini" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_8" />
+
+                        <TextView
+                            android:id="@+id/text_petrol_address"
+                            style="@style/TransactionDetailTextSubtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Via Isonzo 16, Milano" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_25" />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fab_petrol_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pin"
+                            app:backgroundTint="@android:color/white"
+                            app:fabSize="mini"
+                            app:rippleColor="?attr/colorControlHighlight"
+                            app:tint="@null" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.53">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/button_next"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AmountLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:gravity="center"
+                            android:text="@string/petrol_choose_pump_number_label" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_pumps"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_next"
+                        style="@style/CustomBigButton"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="20dp"
+                        android:enabled="false"
+                        android:text="@string/next_button" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

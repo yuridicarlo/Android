@@ -1,0 +1,222 @@
+{
+  "version": "5",
+  "prefixPhoneNumberList": [
+    {
+      "prefix": "+39",
+      "country": "prefix_label_italy",
+      "countryCode":"IT",
+      "logoFlag": "flag_italia"
+    },
+    {
+      "prefix": "+376",
+      "country": "prefix_label_andorra",
+      "countryCode": "AD",
+      "logoFlag": "flag_andorra"
+    },
+    {
+      "prefix": "+43",
+      "country": "prefix_label_austria",
+      "countryCode": "AT",
+      "logoFlag": "flag_austria"
+    },
+    {
+      "prefix": "+32",
+      "country": "prefix_label_belgio",
+      "countryCode": "BE",
+      "logoFlag": "flag_belgio"
+    },
+    {
+      "prefix": "+359",
+      "country": "prefix_label_bulgaria",
+      "countryCode": "BG",
+      "logoFlag": "flag_bulgaria"
+    },
+    {
+      "prefix": "+357",
+      "country": "prefix_label_cipro",
+      "countryCode": "CY",
+      "logoFlag": "flag_cipro"
+    },
+    {
+      "prefix": "+39",
+      "country": "prefix_label_citta_vaticano",
+      "countryCode":"VA",
+      "logoFlag": "flag_citta_vaticano"
+    },
+    {
+      "prefix": "+385",
+      "country": "prefix_label_croazia",
+      "countryCode":"HR",
+      "logoFlag": "flag_croazia"
+    },
+    {
+      "prefix": "+45",
+      "country": "prefix_label_danimarca",
+      "countryCode":"DK",
+      "logoFlag": "flag_danimarca"
+    },
+    {
+      "prefix": "+372",
+      "country": "prefix_label_estonia",
+      "countryCode":"EE",
+      "logoFlag": "flag_estonia"
+    },
+    {
+      "prefix": "+358",
+      "country": "prefix_label_finlandia",
+      "countryCode":"FI",
+      "logoFlag": "flag_finlandia"
+    },
+    {
+      "prefix": "+33",
+      "country": "prefix_label_francia",
+      "countryCode":"FR",
+      "logoFlag": "flag_francia"
+    },
+    {
+      "prefix": "+49",
+      "country": "prefix_label_germany",
+      "countryCode":"DE",
+      "logoFlag": "flag_germania"
+    },
+    {
+      "prefix": "+30",
+      "country": "prefix_label_grecia",
+      "countryCode":"GR",
+      "logoFlag": "flag_grecia"
+    },
+    {
+      "prefix": "+353",
+      "country": "prefix_label_ireland",
+      "countryCode":"IE",
+      "logoFlag": "flag_irlanda"
+    },
+    {
+      "prefix": "+354",
+      "country": "prefix_label_islanda",
+      "countryCode":"IS",
+      "logoFlag": "flag_islanda"
+    },
+    {
+      "prefix": "+371",
+      "country": "prefix_label_lettonia",
+      "countryCode":"LV",
+      "logoFlag": "flag_lettonia"
+    },
+    {
+      "prefix": "+423",
+      "country": "prefix_label_liechtenstein",
+      "countryCode":"LI",
+      "logoFlag": "flag_liechtenstein"
+    },
+    {
+      "prefix": "+370",
+      "country": "prefix_label_lituania",
+      "countryCode":"LT",
+      "logoFlag": "flag_lituania"
+    },
+    {
+      "prefix": "+352",
+      "country": "prefix_label_lussemburgo",
+      "countryCode":"LU",
+      "logoFlag": "flag_lussemburgo"
+    },
+    {
+      "prefix": "+356",
+      "country": "prefix_label_malta",
+      "countryCode":"MT",
+      "logoFlag": "flag_malta"
+    },
+    {
+      "prefix": "+47",
+      "country": "prefix_label_norvegia",
+      "countryCode":"NO",
+      "logoFlag": "flag_norvegia"
+    },
+    {
+      "prefix": "+31",
+      "country": "prefix_label_paesi_bassi",
+      "countryCode":"NL",
+      "logoFlag": "flag_paesi_bassi"
+    },
+    {
+      "prefix": "+48",
+      "country": "prefix_label_polonia",
+      "countryCode":"PL",
+      "logoFlag": "flag_polonia"
+    },
+    {
+      "prefix": "+351",
+      "country": "prefix_label_portogallo",
+      "countryCode":"PT",
+      "logoFlag": "flag_portogallo"
+    },
+    {
+      "prefix": "+377",
+      "country": "prefix_label_principato_monaco",
+      "countryCode":"MC",
+      "logoFlag": "flag_principato_monaco"
+    },
+    {
+      "prefix": "+44",
+      "country": "prefix_label_regno_unito",
+      "countryCode":"GB",
+      "logoFlag": "flag_regno_unito"
+    },
+    {
+      "prefix": "+420",
+      "country": "prefix_label_repubblica_ceca",
+      "countryCode":"CZ",
+      "logoFlag": "flag_repubblica_ceca"
+    },
+    {
+      "prefix": "+40",
+      "country": "prefix_label_romania",
+      "countryCode":"RO",
+      "logoFlag": "flag_romania"
+    },
+    {
+      "prefix": "+378",
+      "country": "prefix_label_san_marino",
+      "countryCode":"SM",
+      "logoFlag": "flag_san_marino"
+    },
+    {
+      "prefix": "+421",
+      "country": "prefix_label_slovacchia",
+      "countryCode":"SK",
+      "logoFlag": "flag_slovacchia"
+    },
+    {
+      "prefix": "+386",
+      "country": "prefix_label_slovenia",
+      "countryCode":"SI",
+      "logoFlag": "flag_slovenia"
+    },
+    {
+      "prefix": "+34",
+      "country": "prefix_label_spagna",
+      "countryCode":"ES",
+      "logoFlag": "flag_spagna"
+    },
+    {
+      "prefix": "+46",
+      "country": "prefix_label_svezia",
+      "countryCode":"SE",
+      "logoFlag": "flag_svezia"
+    },
+    {
+      "prefix": "+41",
+      "country": "prefix_label_svizzera",
+      "countryCode":"CH",
+      "logoFlag": "flag_svizzera"
+    },
+    {
+      "prefix": "+36",
+      "country": "prefix_label_ungheria",
+      "countryCode":"HU",
+      "logoFlag": "flag_ungheria"
+    }
+  ]
+}
+

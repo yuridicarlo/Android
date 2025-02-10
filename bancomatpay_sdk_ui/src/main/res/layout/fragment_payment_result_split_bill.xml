@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:fitsSystemWindows="false"
+        tools:context=".activities.ResultPaymentActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/generic_coloured_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_merchant"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/image_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.47"
+                        android:scaleType="centerCrop"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.53" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/image_background_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/merchant_image_background_mask"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/result_ok_ko"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:visibility="invisible" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_result_p2p"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitStart"
+            android:visibility="invisible"
+            app:lottie_fileName="@string/animation_p2p_result_ok"
+            app:lottie_loop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/background_right"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.43">
+
+                <it.bancomatpay.sdkui.widgets.ToolbarSimple
+                    android:id="@+id/toolbar_simple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/status_bar_height"
+                    app:centerImg="@drawable/logo_bancomat"
+                    app:rightImg="@drawable/share" />
+
+                <!--Contact-->
+                <RelativeLayout
+                    android:id="@+id/split_bill_info_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/toolbar_simple"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center">
+
+
+                    <RelativeLayout
+                        android:id="@+id/layout_split_bill_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="@dimen/size_10">
+
+                        <ImageView
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/profile_circle_chip" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/layout_split_bill_chip"
+                        android:layout_alignTop="@id/layout_split_bill_chip"
+                        android:layout_alignEnd="@id/layout_split_bill_chip"
+                        android:layout_alignBottom="@id/layout_split_bill_chip"
+                        android:src="@drawable/dividi_spesa" />
+
+                    <LinearLayout
+                        android:id="@+id/contact_consumer_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@id/layout_split_bill_chip"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/contact_hidden_name"
+                            style="@style/ContactNameHiddenText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/causal"
+                            style="@style/ContactName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLength="25"
+                            android:maxLines="1"
+                            tools:text="Cena Sushi" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            style="@style/ContactNameItemDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Serata fuori tra amici" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_merchant_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/toolbar_simple"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/text_merchant_name"
+                        style="@style/TransactionDetailTextTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_8" />
+
+                    <TextView
+                        android:id="@+id/text_merchant_address"
+                        style="@style/TransactionDetailTextSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_25" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".57"
+                android:orientation="vertical">
+
+                <it.bancomatpay.sdkui.widgets.VerticalScrollView
+                    android:id="@+id/scroll_view_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="34dp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toTopOf="@id/button_home_layout"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--Amount-->
+                        <LinearLayout
+                            android:id="@+id/layout_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/text_amount_label"
+                                style="@style/AmountLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/amount_label" />
+
+                            <TextView
+                                android:id="@+id/text_amount"
+                                style="@style/AmountText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                tools:text="40,00 $"/>
+
+                            <TextView
+                                android:id="@+id/text_local_amount_and_currency"
+                                style="@style/LocalAmountAndCurrencyText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="(155,50 NOK)"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/result_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/layout_amount">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/result_animation"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:visibility="invisible"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false" />
+
+                            <TextSwitcher
+                                android:id="@+id/result_text_switcher"
+                                style="@style/AmountLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="@string/p2p_result_ko" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </it.bancomatpay.sdkui.widgets.VerticalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/button_home_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scroll_view_result">
+
+                    <TextView
+                        android:id="@+id/text_preauthorization_notification_label"
+                        style="@style/TextPreauthorizationNotificationLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_preauthorization_notification_label"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/home_button"
+                        style="@style/CustomBigButton"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/button_vertical_margin"
+                        android:text="@string/close_button"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/loading_img_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_recap" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/result_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="@string/loader_right"
+            app:lottie_loop="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<RelativeLayout
+		android:id="@+id/main_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"
+		android:fitsSystemWindows="false"
+		tools:context=".activities.loyaltycard.AddLoyaltyCardImageActivity">
+
+		<it.bancomatpay.sdkui.widgets.ToolbarSimple
+			android:id="@+id/toolbar_simple"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/status_bar_height"
+			app:centerImg="@drawable/empty"
+			app:leftImg="@drawable/back_blue"
+			app:rightImg="@drawable/info_ico" />
+
+		<LinearLayout
+			android:id="@+id/layout_title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/toolbar_simple"
+			android:orientation="vertical">
+
+			<TextView
+				style="@style/ListLabel"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/activity_horizontal_margin"
+				android:layout_marginRight="@dimen/activity_horizontal_margin"
+				android:layout_marginBottom="8dp"
+				android:text="@string/tutorial_title_atm_cardless" />
+
+			<TextView
+				style="@style/LabelTelephone"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/activity_horizontal_margin"
+				android:layout_marginRight="@dimen/activity_horizontal_margin"
+				android:layout_marginBottom="20dp"
+				android:text="@string/atm_cardless_scan_qr_subtitle" />
+
+		</LinearLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/layout_title"
+			android:layout_alignParentBottom="true">
+
+			<com.journeyapps.barcodescanner.DecoratedBarcodeView
+				android:id="@+id/zxing_barcode_scanner"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				app:zxing_preview_scaling_strategy="fitXY"
+				app:zxing_use_texture_view="false" />
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scaleType="centerCrop"
+				app:srcCompat="@drawable/background_home_camera_on" />
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+</layout>

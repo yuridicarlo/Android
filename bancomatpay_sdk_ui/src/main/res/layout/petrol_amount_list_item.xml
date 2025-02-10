@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<TextView
+		android:id="@+id/text_amount_item"
+		style="@style/TextPetrolItemAmount"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:focusable="true"
+		android:text="100 €" />
+
+	<ImageView
+		android:id="@+id/image_arrow_up"
+		android:layout_width="18dp"
+		android:layout_height="18dp"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="20dp"
+		android:src="@drawable/arrow_up_web" />
+
+</RelativeLayout>

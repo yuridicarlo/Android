@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_settings_separator_header">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titolo"
+        android:fontFamily="@font/lato_text_regular"
+        android:textColor="@color/text_light_color"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp" />
+
+</RelativeLayout>

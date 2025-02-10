@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item
+            android:id="@+id/menu_home_transactions"
+            android:title="@string/menu_voice_1"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/menu_home_profile"
+            android:title="@string/menu_voice_2"
+            app:showAsAction="never" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/menu_home_settings"
+            android:title="@string/menu_voice_3"
+            app:showAsAction="never" />
+    </group>
+
+</menu>

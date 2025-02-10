@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+
+		<import type="android.view.View" />
+
+		<variable
+			name="item"
+			type="it.bancomatpay.sdk.manager.task.model.SplitBillHistory" />
+
+		<variable
+			name="listener"
+			type="it.bancomatpay.sdkui.adapter.HomeRecentSplitBillsAdapter.SplitBillHistoryItemInteractionListener" />
+
+	</data>
+
+	<LinearLayout
+		android:id="@+id/layout_container"
+		android:layout_width="85dp"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_marginHorizontal="@dimen/size_10"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:onClick="@{v -> listener.onTap(item)}">
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				app:cardBackgroundColor="@android:color/transparent"
+				app:cardCornerRadius="25dp"
+				app:cardElevation="0dp">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<ImageView
+						android:id="@+id/image_border"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:background="@drawable/profile_circle_chip"
+						android:src="@drawable/contact_list_item_circle_background" />
+
+					<ImageView
+						android:id="@+id/image_split_bill"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:src="@drawable/dividi_spesa" />
+
+				</RelativeLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+		</RelativeLayout>
+
+		<TextView
+			android:id="@+id/label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			style="@style/HomeItemLabel"
+			android:singleLine="true"
+			tools:text="Cena Sushiaaaaa"/>
+	</LinearLayout>
+
+</layout>

@@ -1,0 +1,273 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="SpUsage">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimaryBancomat</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@android:color/white</item>
+
+        <item name="android:dialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:buttonBarButtonStyle">@style/DialogButton</item>
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimaryBancomat</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+
+        <item name="android:dialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:buttonBarButtonStyle">@style/DialogButton</item>
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+    <!--<style name="TransparentTheme" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>-->
+
+    <style name="TransparentTheme" parent="@style/Theme.MaterialComponents.Light">
+
+        <item name="colorPrimary">@color/colorPrimaryBancomat</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBancomat</item>
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="SplashScreenTheme" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/transparent
+        </item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeIntro" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/transparent
+        </item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeLogin" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/transparent
+        </item>
+
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeChooseBank" parent="AppTheme">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeLostPin" parent="AppTheme">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeActivationCompleted" parent="AppTheme">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeActivableBank" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="NoBcmPayBankListActivity" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeActivationActivity" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeOneShotActivity" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeConfirmPendingPaymentActivity" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePendingPaymentResultActivity" parent="AppThemeSdkUiNoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeNoPendingPaymentActivity" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemePendingPaymentsActivity" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeNoBcmPayUserActivity" parent="AppThemeSdkUi">
+        <item name="android:windowLightStatusBar" tools:targetApi="o_mr1">false</item>
+
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="AppThemeStoreLocator" parent="AppThemeSdkUi">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="TextActionLabel" parent="TextRegular">
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="TextActionLabelSemiBold" parent="TextSemiBold">
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="TextActionLabelRegular" parent="TextRegular">
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="TextErrorLabel" parent="TextRegular">
+        <item name="android:textColor">@color/text_error_color</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="PendingPaymentsResultText" parent="TextRegular">
+        <item name="android:textColor">@color/payment_total_label_payment_inserted</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="AppWhiteButton" parent="TextRegular">
+        <item name="android:background">@drawable/button_round_white_background</item>
+        <item name="android:textColor">@color/button_generic_color</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="android:stateListAnimator" tools:targetApi="lollipop">@null</item>
+    </style>
+
+    <style name="AppThemeSupport" parent="AppTheme">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="o_mr1">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDarkBancomat</item>
+    </style>
+
+    <style name="WidgetsKeyboardButtonLogin">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="WidgetsKeyboardButtonRippleLogin" parent="WidgetsKeyboardButtonLogin">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="WidgetsKeyboardButtonSubmitLogin" parent="WidgetsKeyboardButtonRippleLogin">
+        <item name="android:fontFamily">@font/lato_text_regular</item>
+        <item name="android:textSize" tools:ignore="SpUsage">30dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="WidgetsKeyboardButtonSubmitRippleLogin" parent="WidgetsKeyboardButtonRippleLogin">
+        <item name="android:fontFamily">@font/lato_text_regular</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="CheckboxStyle" parent="AppTheme">
+        <item name="colorAccent">@color/colorAccentBancomat</item>
+        <item name="android:textColorSecondary">@color/grey</item>
+    </style>
+
+    <style name="SupportBottomText" parent="TextRegular">
+        <item name="android:textColor">@color/text_light_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="SupportColouredBottomText" parent="TextSemiBold">
+        <item name="android:textColor">@color/colorAccentBancomat</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!-- Style override from sdk ui -->
+    <style name="CustomBigButton" parent="TextRegular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/button_round_background_state_list</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="android:stateListAnimator" tools:targetApi="lollipop">@null</item>
+    </style>
+
+</resources>

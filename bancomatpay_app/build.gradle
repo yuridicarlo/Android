@@ -1,0 +1,202 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'androidx.navigation.safeargs'
+
+
+File signFile = rootProject.file('bancomat.properties')
+Properties p = new Properties()
+p.load(new FileInputStream(signFile))
+File directoriesFile = rootProject.file('bancomat-directories.properties')
+Properties pDirectories = new Properties()
+pDirectories.load(new FileInputStream(directoriesFile))
+
+if (p.enableDexguard == 'true') {
+    apply plugin: 'dexguard'
+}
+
+android {
+    compileSdkVersion 34
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        applicationId "it.bancomat.pay.user"
+        minSdkVersion 24
+        targetSdkVersion 34
+        versionCode p.appBuildVersion.toInteger()
+        versionName p.appNameVersion
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
+
+    signingConfigs {
+        debugConfig {
+            storeFile file(pDirectories.storeFile)
+            storePassword p.storePassword
+            keyAlias p.keyAlias
+            keyPassword p.keyPassword
+        }
+        releaseConfig {
+            storeFile file(pDirectories.storeFile)
+            storePassword p.storePassword
+            keyAlias p.keyAlias
+            keyPassword p.keyPassword
+        }
+    }
+
+    buildTypes.release.signingConfig signingConfigs.releaseConfig
+    buildTypes.debug.signingConfig signingConfigs.debugConfig
+
+
+    buildTypes {
+        debug {
+            multiDexEnabled true
+            splits.abi.enable = false
+            splits.density.enable = false
+            aaptOptions.cruncherEnabled = false
+            ext.alwaysUpdateBuildId = false
+
+            packagingOptions  {
+                // If the CPU architecture is ARMv7 or ARMv8, add the following configuration:
+                doNotStrip "*/arm64-v8a/libucs-credential.so"
+                doNotStrip "*/armeabi-v7a/libucs-credential.so"
+                // If the CPU architecture is x86, add the following configuration:
+                doNotStrip "*/x86/libucs-credential.so"
+                doNotStrip "*/x86_64/libucs-credential.so"
+            }
+        }
+        release {
+            multiDexEnabled true
+            minifyEnabled false
+
+            packagingOptions  {
+                // If the CPU architecture is ARMv7 or ARMv8, add the following configuration:
+                doNotStrip "*/arm64-v8a/libucs-credential.so"
+                doNotStrip "*/armeabi-v7a/libucs-credential.so"
+                // If the CPU architecture is x86, add the following configuration:
+                doNotStrip "*/x86/libucs-credential.so"
+                doNotStrip "*/x86_64/libucs-credential.so"
+            }
+            ndk {
+                debugSymbolLevel 'FULL'
+            }
+        }
+    }
+
+    if (p.enableDexguard == 'true') {
+        dexguard {
+            path = pDirectories.dexGuardPath
+            license = pDirectories.dexGuardLicense
+            configurations {
+                release {
+                    defaultConfiguration 'dexguard-release.pro'
+                    configuration 'dexguard-project.txt'
+                    uploadCrashlyticsMappingFile = true
+                    defaultConfiguration 'dexguard-rasp.pro'
+                }
+            }
+        }
+    }
+
+    buildTypes.each {
+        it.resValue "string", "FILE_PROVIDER_AUTHORITY", 'it.bancomat.pay.consumer.fileprovider'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "host"
+
+    productFlavors {
+
+        develop {
+            versionNameSuffix "." + p.appBuildVersion
+        }
+
+        cloudreply {
+            versionNameSuffix "." + p.appBuildVersion
+        }
+
+        collaudo {
+            versionNameSuffix "." + p.appBuildVersion
+        }
+
+        uat {
+            versionNameSuffix "." + p.appBuildVersion
+        }
+
+        produzione {
+        }
+    }
+
+    ndkVersion '24.0.8215888'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.media:media:1.2.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation('com.squareup.picasso:picasso:2.71828') { transitive = false }
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3@aar'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.16'
+    implementation 'com.airbnb.android:lottie:3.5.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.9'
+    implementation 'com.google.firebase:firebase-messaging:23.0.3'
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.Cutta:GifView:1.4'
+
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC2'
+
+    implementation project(path: ':bancomatpay_sdk_ui')
+    implementation 'androidx.browser:browser:1.3.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.cachapa:ExpandableLayout:2.9.2'
+
+    implementation 'com.appsflyer:af-android-sdk:6.1.0'
+    implementation 'com.android.installreferrer:installreferrer:2.1'
+
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'io.reactivex.rxjava2:rxjava:2.1.1'
+
+    implementation 'androidx.biometric:biometric:1.1.0'
+    //HMS REQUIRED
+    implementation 'com.huawei.hms:push:6.3.0.304'
+    implementation 'com.huawei.hms:hwid:6.4.0.300'
+
+}
+
+apply plugin: 'com.huawei.agconnect'

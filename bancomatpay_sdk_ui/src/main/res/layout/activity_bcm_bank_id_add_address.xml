@@ -1,0 +1,208 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <it.bancomatpay.sdkui.widgets.ToolbarSimple
+        android:id="@+id/toolbar_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:centerImg="@drawable/empty"
+        app:leftImg="@drawable/back_blue"
+        app:rightImg="@drawable/trash_blue" />
+
+    <TextView
+        android:id="@+id/text_title"
+        style="@style/TextGenericTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_simple"
+        android:text="@string/bank_id_title_add_address" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_save_address"
+        android:layout_below="@id/text_title"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <it.bancomatpay.sdkui.widgets.CustomEditText
+                android:id="@+id/edit_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="2dp"
+                app:hint="@string/bank_id_add_address_hint_name"
+                app:showDefaultCancel="false"
+                app:prefixSelector="false"
+                app:showErrorText="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <it.bancomatpay.sdkui.widgets.CustomEditText
+                android:id="@+id/edit_text_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="2dp"
+                app:hint="@string/bank_id_add_address_hint_address"
+                app:showDefaultCancel="false"
+                app:prefixSelector="false"
+                app:showErrorText="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <it.bancomatpay.sdkui.widgets.CustomEditText
+                android:id="@+id/edit_text_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="2dp"
+                app:hint="@string/bank_id_add_address_hint_city"
+                app:prefixSelector="false"
+                app:showDefaultCancel="false"
+                app:showErrorText="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <it.bancomatpay.sdkui.widgets.CustomEditText
+                    android:id="@+id/edit_text_province"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:elevation="2dp"
+                    app:hint="@string/bank_id_add_address_hint_province"
+                    app:prefixSelector="false"
+                    app:showDefaultCancel="false"
+                    app:showErrorText="false" />
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent" />
+
+                <it.bancomatpay.sdkui.widgets.CustomEditText
+                    android:id="@+id/edit_text_cap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:elevation="2dp"
+                    app:hint="@string/bank_id_add_address_hint_cap"
+                    app:prefixSelector="false"
+                    app:showDefaultCancel="false"
+                    app:showErrorText="false" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <it.bancomatpay.sdkui.widgets.CustomEditText
+                android:id="@+id/edit_text_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="2dp"
+                app:hint="@string/bank_id_add_address_hint_country"
+                app:prefixSelector="false"
+                app:showDefaultCancel="false"
+                app:showErrorText="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/checkbox_address_expedition"
+                    style="@style/CheckBoxBankIdAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/bank_id_add_checkbox_address_expedition" />
+
+                <ImageView
+                    android:id="@+id/image_star_expedition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_grey"
+                    android:layout_marginLeft="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/checkbox_address_billing"
+                    style="@style/CheckBoxBankIdAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/bank_id_add_checkbox_address_billing" />
+
+                <ImageView
+                    android:id="@+id/image_star_billing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_grey"
+                    android:layout_marginLeft="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_save_address"
+        style="@style/CustomBigButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/bank_id_button_save_address" />
+
+</RelativeLayout>
+</layout>

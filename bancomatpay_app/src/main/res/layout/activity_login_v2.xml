@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<LinearLayout
+		android:id="@+id/main_layout"
+		android:layout_width="match_parent"
+		android:fitsSystemWindows="false"
+		android:layout_height="match_parent"
+		android:background="@color/home_background"
+		android:orientation="vertical">
+
+		<androidx.coordinatorlayout.widget.CoordinatorLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1.4">
+
+			<ImageView
+				android:id="@+id/image_login_upper"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="top"
+				android:layout_marginBottom="50dp"
+				android:scaleType="fitXY"
+				android:src="@drawable/background_center_login" />
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="top"
+				app:layout_anchor="@id/image_login_upper"
+				app:layout_anchorGravity="top">
+
+				<it.bancomatpay.sdkui.widgets.ToolbarSimple
+					android:id="@+id/toolbar_simple"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/status_bar_height"
+					app:centerImg="@drawable/logo_bancomat"
+					app:leftImg="@drawable/back_white" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_below="@id/toolbar_simple">
+
+					<TextView
+						android:id="@+id/text_insert_pin_label"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="25dp"
+						android:fontFamily="@font/lato_text_semibold"
+						android:gravity="center"
+						android:textColor="@android:color/white"
+						android:textSize="20dp" />
+
+					<it.bancomat.pay.consumer.widget.LabelPasswordLogin
+						android:id="@+id/label_pin"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:layout_marginTop="40dp"
+						android:layout_marginRight="@dimen/activity_horizontal_margin"
+						android:background="@drawable/label_login_background" />
+
+					<TextView
+						android:id="@+id/text_error"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:layout_marginTop="5dp"
+						android:layout_marginRight="@dimen/activity_horizontal_margin"
+						android:fontFamily="@font/lato_text_regular"
+						android:textColor="@android:color/white"
+						android:textSize="15dp"
+						android:visibility="invisible" />
+
+					<TextView
+						android:id="@+id/text_lost_pin"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp"
+						android:fontFamily="@font/lato_text_semibold"
+						android:gravity="center"
+						android:text="@string/lost_pin_title"
+						android:textColor="@android:color/white"
+						android:textSize="15dp" />
+
+				</LinearLayout>
+
+			</RelativeLayout>
+
+			<com.google.android.material.floatingactionbutton.FloatingActionButton
+				android:id="@+id/fab_use_fingerprint"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="@dimen/activity_horizontal_margin"
+				android:src="@drawable/touchid"
+				app:backgroundTint="@android:color/white"
+				app:layout_anchor="@id/image_login_upper"
+				app:layout_anchorGravity="right|bottom"
+				app:tint="@null"
+				app:rippleColor="@color/colorAccentAlpha" />
+
+		</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+		<it.bancomat.pay.consumer.widget.KeyboardPinLogin
+			android:id="@+id/keyboard_pin"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:paddingBottom="@dimen/navigation_bar_height" />
+
+	</LinearLayout>
+
+</layout>

@@ -1,0 +1,74 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<RelativeLayout
+		android:id="@+id/contacts_layout_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white">
+
+		<TextView
+			android:id="@+id/text_title"
+			style="@style/TextGenericTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_marginLeft="@dimen/activity_horizontal_margin"
+			android:layout_marginRight="@dimen/activity_horizontal_margin"
+			android:fontFamily="@font/lato_text_semibold"
+			android:text="@string/choose_pin_label" />
+
+		<TextView
+			android:id="@+id/text_description"
+			style="@style/TextDescriptionStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/text_title"
+			android:layout_marginStart="@dimen/activity_horizontal_margin"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="@dimen/activity_horizontal_margin"
+			android:layout_marginBottom="4dp"
+			android:lines="2"
+			android:text="@string/choose_pin_text"
+			android:textColor="@color/text_generic_color" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_above="@id/keyboard_pin"
+			android:layout_below="@id/text_description"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:paddingBottom="32dp">
+
+			<it.bancomat.pay.consumer.widget.LabelPasswordLogin
+				android:id="@+id/label_pin"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/activity_horizontal_margin"
+				android:layout_marginRight="@dimen/activity_horizontal_margin"
+				android:background="@drawable/texfield" />
+
+			<TextView
+				android:id="@+id/text_error"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/activity_horizontal_margin"
+				android:layout_marginTop="5dp"
+				android:layout_marginRight="@dimen/activity_horizontal_margin"
+				android:fontFamily="@font/lato_text_regular"
+				android:textColor="@color/text_error_color"
+				android:textSize="15dp"
+				android:visibility="invisible" />
+
+		</LinearLayout>
+
+		<it.bancomat.pay.consumer.widget.KeyboardPinLogin
+			android:id="@+id/keyboard_pin"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/activation_keyboard_height"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+	</RelativeLayout>
+
+</layout>

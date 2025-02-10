@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimaryBancomat">#33A9D6</color>
+    <color name="colorPrimaryDarkBancomat">#C6C7C8</color>
+    <color name="colorAccentBancomat">#3BBDEF</color>
+
+    <color name="green_style">#43A313</color>
+    <color name="transactions_money_received">#22A426</color>
+
+    <color name="blue_rombo">#002C6F</color>
+    <color name="blue_esselunga">#0E47A5</color>
+    <color name="blue_keyboard_button_submit_start">#325FC3</color>
+    <color name="confirm_payment_statusbar_color">#2A85A8</color>
+    <color name="blue_keyboard_button_submit_center">#378FD9</color>
+    <color name="blue_keyboard_button_submit_end">#3CBDEE</color>
+    <color name="home_background">#33A9D6</color>
+    <color name="generic_coloured_background">#3CBDEE</color>
+    <color name="button_generic_color">#3BBCED</color>
+    <color name="spending_limits_progressbar_color">#3BBCED</color>
+    <color name="hidden_contact_name">#C0E1EE</color>
+    <color name="card_view_color">#F7F9FC</color>
+    <color name="capture_image_camera_mask">#4D000000</color>
+    <color name="grey_line">#BEBDBE</color>
+
+    <color name="black">#000000</color>
+    <color name="text_color_bcm">#1A171B</color>
+    <color name="text_color_name_generic">#4A4A4A</color>
+    <color name="text_menu_item">#4A494A</color>
+    <color name="payment_total_label_payment_inserted">#4A4A4A</color>
+    <color name="text_generic_color">#494949</color>
+    <color name="bottom_navbar_text_color_unselected">#8E8C8C</color>
+    <color name="bottom_navbar_text_color_selected">#3CBDEE</color>
+    <color name="text_light_color">#6C6C6C</color>
+    <color name="text_color_hint">#757575</color>
+    <color name="text_other_document_title_color">#4A4A4A</color>
+    <color name="payment_total_label_payment">#9B9B9B</color>
+    <color name="tab_unselected_text">#9B9B9B</color>
+    <color name="blue_keyboard_button_submit_disabled">#BEBDBE</color>
+    <color name="home_sliding_layout_handle">#E2E3E3</color>
+    <color name="grey_money_label">#C6C7C8</color>
+    <color name="button_generic_color_disabled">#C3C3C3</color>
+    <color name="tab_underline_background_grey">#DBDBDB</color>
+    <color name="menu_divider_color">#E7E8E9</color>
+    <color name="grey">#ECEDED</color>
+    <color name="fuel_pump_disabled">#D8D8D8</color>
+    <color name="bottomsheet_merchant_location_layout_background">#D9D8D8</color>
+    <color name="button_home_pay_in_stores_background">#4DFFFFFF</color>
+
+    <color name="ripple_color_dark">#B3CECECE</color>
+    <color name="ripple_color_light">#66FFFFFF</color>
+
+    <color name="border_color_bcm">#FBFBFB</color>
+    <color name="spending_limits_progressbar_background">#F0F0F0</color>
+    <color name="profile_text_letter_color">#FFFFFF</color>
+    <color name="white_background">#FFFFFF</color>
+    <color name="blue_status_bar">#2880AA</color>
+    <color name="status_bar_color_semitransparent">#40000000</color>
+    <color name="bottom_navigation_selected_item_color">#F7F9FC</color>
+    <color name="white_alpha">#CCFFFFFF</color>
+    <color name="white_overlay">#666666</color>
+    <color name="notification_circle_red">#C82B3E</color>
+
+    <color name="merchant_image_background_mask">#40000000</color>
+    <color name="text_settings_separator_header">#F7F9FC</color>
+    <color name="text_error_color">#CD5E59</color>
+    <color name="splashStatusBarColor">#2896BF</color>
+    <color name="text_hint_color">#BCBCBC</color>
+    <color name="form_field_error_color">#E30A01</color>
+
+    <color name="blue_statusbar_color">#2A85A8</color>
+
+
+
+
+
+</resources>

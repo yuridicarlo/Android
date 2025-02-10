@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary_fullstack">#33A9D6</color>
+    <color name="colorPrimaryDark_fullstack">#C6C7C8</color>
+    <color name="colorAccent_fullstack">#3BBDEF</color>
+</resources>

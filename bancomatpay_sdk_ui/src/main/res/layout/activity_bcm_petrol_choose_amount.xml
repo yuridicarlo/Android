@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<LinearLayout
+		android:id="@+id/main_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:fitsSystemWindows="false"
+		tools:context=".activities.petrol.PetrolChooseAmountActivity">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/generic_coloured_background">
+
+			<RelativeLayout
+				android:id="@+id/layout_merchant_image"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@drawable/img_merchant">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical"
+					android:weightSum="1">
+
+					<ImageView
+						android:id="@+id/image_background_merchant"
+						android:layout_width="match_parent"
+						android:layout_height="0dp"
+						android:layout_weight="0.48"
+						android:scaleType="centerCrop"
+						android:visibility="invisible" />
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0dp"
+						android:layout_weight="0.52" />
+
+				</LinearLayout>
+
+				<ImageView
+					android:id="@+id/image_background_mask"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:src="@color/merchant_image_background_mask"
+					android:visibility="invisible" />
+
+			</RelativeLayout>
+
+			<LinearLayout
+				android:id="@+id/layout_transaction_detail_consumer"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginRight="-1dp"
+				android:layout_marginBottom="-1dp"
+				android:background="@drawable/background_center"
+				android:orientation="vertical"
+				android:weightSum="1">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="0.47">
+
+					<it.bancomatpay.sdkui.widgets.ToolbarSimple
+						android:id="@+id/toolbar_simple"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentTop="true"
+						android:layout_marginTop="@dimen/status_bar_height"
+						app:leftImg="@drawable/back_white"
+						app:centerImg="@drawable/logo_bancomat"
+						app:rightImg="@drawable/info_ico_white" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_below="@id/toolbar_simple"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<TextView
+							android:id="@+id/text_petrol_name"
+							style="@style/TextPetrolTitle"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="@dimen/size_10" />
+
+						<TextView
+							android:id="@+id/text_petrol_address"
+							style="@style/TextPetrolSubtitle"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="@dimen/size_12" />
+
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/fab_petrol_location"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:src="@drawable/pin"
+							app:backgroundTint="@android:color/white"
+							app:fabSize="mini"
+							app:tint="@null"
+							app:rippleColor="?attr/colorControlHighlight" />
+
+					</LinearLayout>
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="0.53">
+
+					<TextView
+						android:id="@+id/text_choose_amount"
+						style="@style/TransactionDetailTextStatus"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:layout_marginTop="@dimen/activity_vertical_margin"
+						android:layout_marginRight="@dimen/activity_horizontal_margin"
+						android:layout_marginBottom="@dimen/size_25"
+						android:text="@string/petrol_choose_amount_label" />
+
+					<androidx.cardview.widget.CardView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@id/text_choose_amount"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:layout_marginRight="@dimen/activity_horizontal_margin"
+						android:layout_marginBottom="@dimen/activity_vertical_margin"
+						app:cardBackgroundColor="@android:color/white"
+						app:cardCornerRadius="12dp"
+						app:cardElevation="4dp">
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical">
+
+							<RelativeLayout
+								android:id="@+id/layout_open_spinner"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:background="?attr/selectableItemBackground"
+								android:clickable="true"
+								android:focusable="true">
+
+								<TextSwitcher
+									android:id="@+id/text_switcher_selected_amount"
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_centerInParent="true" />
+
+								<ImageView
+									android:id="@+id/image_arrow_down"
+									android:layout_width="18dp"
+									android:layout_height="18dp"
+									android:layout_alignParentRight="true"
+									android:layout_centerVertical="true"
+									android:layout_marginRight="20dp"
+									android:src="@drawable/arrow_down_web" />
+
+							</RelativeLayout>
+
+						</LinearLayout>
+
+					</androidx.cardview.widget.CardView>
+
+					<net.cachapa.expandablelayout.ExpandableLayout
+						android:id="@+id/expandable_layout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@id/text_choose_amount"
+						android:translationZ="10dp"
+						app:el_duration="250"
+						app:el_expanded="false"
+						app:el_parallax="1">
+
+						<androidx.cardview.widget.CardView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="@dimen/activity_horizontal_margin"
+							android:layout_marginRight="@dimen/activity_horizontal_margin"
+							android:layout_marginBottom="@dimen/activity_vertical_margin"
+							app:cardBackgroundColor="@android:color/white"
+							app:cardCornerRadius="12dp"
+							app:cardElevation="5dp">
+
+							<androidx.recyclerview.widget.RecyclerView
+								android:id="@+id/recycler_view_amount"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:scrollbarSize="2dp"
+								android:scrollbars="vertical" />
+
+						</androidx.cardview.widget.CardView>
+
+					</net.cachapa.expandablelayout.ExpandableLayout>
+
+					<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/button_next"
+						style="@style/CustomBigButton"
+						android:layout_alignParentBottom="true"
+						android:layout_marginTop="@dimen/size_30"
+						android:layout_marginBottom="20dp"
+						android:text="@string/next_button" />
+
+				</RelativeLayout>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</layout>

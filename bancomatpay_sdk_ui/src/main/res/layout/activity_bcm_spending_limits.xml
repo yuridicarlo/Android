@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <it.bancomatpay.sdkui.widgets.ToolbarSimple
+            android:id="@+id/toolbar_simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:centerImg="@drawable/empty"
+            app:leftImg="@drawable/back_blue" />
+
+        <TextView
+            style="@style/TextGenericTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_spending_limits_label" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <TextView
+            style="@style/TextGenericSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spending_limits_subtitle" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_30" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SpendingLimitsProgressTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send_money_payment_label" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:id="@+id/max_transaction"
+                    style="@style/TextGenericSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_spending_limits_max_limit" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <it.bancomatpay.sdkui.widgets.ProgressBarSpendingLimits
+                    android:id="@+id/profile_spending_progress_bar_day_rubric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10"
+                    app:subtitleName="@string/progress_bar_spending_limits_limit_daily" />
+
+                <View
+                    style="@style/LineG1"
+                    android:layout_marginLeft="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_20" />
+
+                <it.bancomatpay.sdkui.widgets.ProgressBarSpendingLimits
+                    android:id="@+id/profile_spending_progress_bar_month_rubric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20"
+                    app:subtitleName="@string/progress_bar_spending_limits_limit_monthly" />
+
+                <View
+                    style="@style/LineG1"
+                    android:layout_marginTop="@dimen/size_20" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_20" />
+
+                <TextView
+                    style="@style/SpendingLimitsProgressTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_label" />
+
+                <it.bancomatpay.sdkui.widgets.ProgressBarSpendingLimits
+                    android:id="@+id/profile_spending_progress_bar_day_merchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10"
+                    app:subtitleName="@string/progress_bar_spending_limits_limit_daily" />
+
+                <View
+                    style="@style/LineG1"
+                    android:layout_marginLeft="@dimen/size_20"
+                    android:layout_marginTop="@dimen/size_20" />
+
+                <it.bancomatpay.sdkui.widgets.ProgressBarSpendingLimits
+                    android:id="@+id/profile_spending_progress_bar_month_merchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20"
+                    app:subtitleName="@string/progress_bar_spending_limits_limit_monthly" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

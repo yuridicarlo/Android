@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+
+		<import type="android.view.View" />
+
+		<variable
+			name="contact"
+			type="it.bancomatpay.sdkui.model.SplitItemConsumer" />
+
+		<variable
+			name="listener"
+			type="it.bancomatpay.sdkui.adapter.SplitBillContactsAdapter.SplitMoneyContactClickListener" />
+
+	</data>
+
+	<LinearLayout
+		android:id="@+id/layout_container"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<RelativeLayout
+			android:layout_marginHorizontal="@dimen/size_10"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:onClick="@{v -> listener.onContactDelete(contact)}">
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				app:cardBackgroundColor="@android:color/transparent"
+				app:cardCornerRadius="25dp"
+				app:cardElevation="0dp">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<ImageView
+						android:id="@+id/image_contact"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:src="@drawable/contact_list_item_circle_background" />
+
+					<TextView
+						android:id="@+id/text_initials"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+						android:text="@{contact.letter}"
+						tools:text="AD" />
+
+				</RelativeLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<ImageView
+				android:id="@+id/image_delete"
+				android:layout_width="16dp"
+				android:layout_height="16dp"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentEnd="true"
+				android:alpha="1"
+				android:src="@drawable/ico_elimina"/>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</layout>

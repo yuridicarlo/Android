@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/main_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fitsSystemWindows="false"
+		android:background="@color/generic_coloured_background"
+		tools:context=".activities.ConfirmPaymentActivity">
+
+		<it.bancomatpay.sdkui.widgets.VerticalScrollView
+			android:id="@+id/scroll_view_confirm_payment"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:fillViewport="true"
+			android:isScrollContainer="true"
+			android:overScrollMode="never"
+			android:scrollbars="vertical"
+			app:layout_constraintBottom_toTopOf="@id/confirm_button"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:scaleType="fitXY"
+					android:src="@drawable/background_center"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:id="@+id/layout_top"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					app:layout_constraintBottom_toTopOf="@id/layout_bottom"
+					app:layout_constraintHeight_percent=".53"
+					app:layout_constraintTop_toTopOf="parent">
+
+					<it.bancomatpay.sdkui.widgets.ToolbarSimple
+						android:id="@+id/toolbar_simple"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						app:centerImg="@drawable/logo_bancomat"
+						app:layout_constraintTop_toTopOf="parent"
+						app:leftImg="@drawable/back_white" />
+
+					<RelativeLayout
+						android:id="@+id/contact_consumer_box"
+						android:layout_width="match_parent"
+						android:layout_height="0dp"
+						android:gravity="center"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintTop_toBottomOf="@id/toolbar_simple">
+
+						<TextView
+							android:id="@+id/payment_type_label"
+							style="@style/PaymentTypeLabel"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_above="@id/layout_contact"
+							android:layout_marginBottom="25dp"
+							android:gravity="center"
+							android:visibility="invisible" />
+
+						<RelativeLayout
+							android:id="@+id/layout_contact"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true"
+							android:gravity="center">
+
+							<RelativeLayout
+								android:id="@+id/layout_contact_consumer_image"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_centerVertical="true"
+								android:layout_marginStart="12dp"
+								android:layout_marginEnd="@dimen/size_10">
+
+								<de.hdodenhof.circleimageview.CircleImageView
+									android:id="@+id/contact_consumer_image_profile_circle"
+									android:layout_width="75dp"
+									android:layout_height="75dp" />
+
+								<ImageView
+									android:id="@+id/contact_consumer_image_profile"
+									android:layout_width="75dp"
+									android:layout_height="75dp"
+									android:src="@drawable/profile_letter_circle_background" />
+
+							</RelativeLayout>
+
+							<ImageView
+								android:id="@+id/contact_consumer_is_active"
+								style="@style/SlidingPanelPriceStyle"
+								android:layout_width="30dp"
+								android:layout_height="30dp"
+								android:layout_alignRight="@id/layout_contact_consumer_image"
+								android:layout_alignBottom="@id/layout_contact_consumer_image"
+								android:gravity="center"
+								android:src="@drawable/logo_rubrica" />
+
+							<LinearLayout
+								android:id="@+id/contact_consumer_text"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_centerVertical="true"
+								android:layout_marginLeft="10dp"
+								android:layout_toEndOf="@id/layout_contact_consumer_image"
+								android:gravity="center_vertical"
+								android:orientation="vertical">
+
+								<net.cachapa.expandablelayout.ExpandableLayout
+									android:id="@+id/expandable_layout_hidden_name"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:el_duration="200"
+									app:el_expanded="false"
+									app:el_parallax="1">
+
+									<TextView
+										android:id="@+id/contact_hidden_name"
+										style="@style/ContactNameHiddenText"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:ellipsize="end"
+										android:maxLines="1" />
+
+								</net.cachapa.expandablelayout.ExpandableLayout>
+
+								<TextView
+									android:id="@+id/contact_consumer_name"
+									style="@style/ContactName"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:ellipsize="end"
+									android:maxLength="25"
+									android:maxLines="1"
+									tools:text="Claudio Consoniaaaaaaaaaaa" />
+
+								<TextView
+									android:id="@+id/contact_consumer_number"
+									style="@style/ContactNameItemDescription"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									tools:text="+39 3345680980" />
+
+							</LinearLayout>
+
+							<TextView
+								android:id="@+id/contact_consumer_letter"
+								style="@style/ContactLetterPlaceholder"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_alignStart="@id/layout_contact_consumer_image"
+								android:layout_alignTop="@id/layout_contact_consumer_image"
+								android:layout_alignEnd="@id/layout_contact_consumer_image"
+								android:layout_alignBottom="@id/layout_contact_consumer_image"
+								android:visibility="invisible"
+								tools:text="A" />
+
+						</RelativeLayout>
+
+					</RelativeLayout>
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+				<LinearLayout
+					android:id="@+id/layout_bottom"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:orientation="vertical"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintHeight_percent="0.47"
+					app:layout_constraintTop_toBottomOf="@id/layout_top">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="20dp"
+						android:orientation="vertical">
+
+						<TextView
+							style="@style/AmountLabel"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/amount_label" />
+
+						<TextView
+							android:id="@+id/total_amount"
+							style="@style/AmountText"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp" />
+
+						<TextView
+							android:id="@+id/text_fee"
+							style="@style/AmountLabel"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:text="@string/fee_label"
+							android:visibility="invisible" />
+
+						<View
+							android:layout_width="match_parent"
+							android:layout_height="@dimen/size_20" />
+
+					</LinearLayout>
+
+					<it.bancomatpay.sdkui.widgets.CustomEditText
+						android:id="@+id/send_money_message"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingLeft="@dimen/activity_horizontal_margin"
+						android:paddingRight="@dimen/activity_horizontal_margin"
+						app:elevation="2dp"
+						app:hint="@string/write_your_message"
+						app:maxCharacters="@integer/causal_max_length"
+						app:prefixSelector="false"
+						app:showDefaultCancel="false"
+						app:showErrorText="false" />
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="10dp" />
+
+				</LinearLayout>
+
+				<com.airbnb.lottie.LottieAnimationView
+					android:id="@+id/result_center_loader"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:scaleType="centerCrop"
+					app:lottie_autoPlay="true"
+					app:lottie_fileName="@string/loader_center"
+					app:lottie_loop="true"
+					app:lottie_scale="0.5" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</it.bancomatpay.sdkui.widgets.VerticalScrollView>
+
+		<View
+			android:id="@+id/space_guideline_bottom"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginBottom="21dp"
+			app:layout_constraintBottom_toTopOf="@id/confirm_button"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent" />
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:src="@android:color/white"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintTop_toTopOf="@id/space_guideline_bottom" />
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/confirm_button"
+			style="@style/CustomBigButton"
+			android:layout_marginVertical="20dp"
+			android:enabled="false"
+			android:text="@string/confirm"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/scroll_view_confirm_payment" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        android:orientation="vertical"
+        tools:context=".activities.pos.PosWithdrawalResultActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/generic_coloured_background">
+
+            <RelativeLayout
+                android:id="@+id/layout_merchant_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_merchant">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/image_background_merchant"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.48"
+                        android:scaleType="centerCrop"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.52" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/image_background_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/merchant_image_background_mask"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_transaction_detail_consumer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="-1dp"
+                android:background="@drawable/background_right"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.47">
+
+                    <it.bancomatpay.sdkui.widgets.ToolbarSimple
+                        android:id="@+id/toolbar_simple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="@dimen/status_bar_height"
+                        app:centerImg="@drawable/logo_bancomat" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/toolbar_simple"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_merchant_name"
+                            style="@style/TextWithdrawalOperationTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_10" />
+
+                        <TextView
+                            android:id="@+id/text_merchant_address"
+                            style="@style/TextWithdrawalOperationSubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_12" />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fab_merchant_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pin"
+                            app:backgroundTint="@android:color/white"
+                            app:fabSize="mini"
+                            app:rippleColor="?attr/colorControlHighlight"
+                            app:tint="@null" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.53"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/button_close"
+                            android:layout_marginTop="@dimen/size_10"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layout_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/withdraw_recap_label"
+                                    style="@style/AmountLabel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/size_14"
+                                    android:text="@string/amount_label" />
+
+                                <TextView
+                                    android:id="@+id/text_amount"
+                                    style="@style/AmountText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/size_14" />
+
+                                <TextView
+                                    android:id="@+id/text_fee"
+                                    style="@style/AmountLabel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/size_38"
+                                    android:text="@string/fee_label" />
+
+                            </LinearLayout>
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/result_animation"
+                                android:layout_width="@dimen/size_76"
+                                android:layout_height="@dimen/size_76"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/size_25"
+                                android:visibility="invisible"
+                                app:lottie_autoPlay="false"
+                                app:lottie_loop="false" />
+
+                            <TextSwitcher
+                                android:id="@+id/result_text_switcher"
+                                style="@style/AmountLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/size_14"
+                                android:layout_marginTop="@dimen/size_23"
+                                android:layout_marginRight="@dimen/size_14"
+                                android:layout_marginBottom="@dimen/size_43" />
+
+                            <TextView
+                                android:id="@+id/text_subdescription"
+                                style="@style/TransactionDetailTextStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:gravity="center_horizontal"
+                                android:text="@string/withdrawal_operation_result_sublabel"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_close"
+                        style="@style/CustomBigButton"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/button_vertical_margin"
+                        android:visibility="invisible"
+                        android:text="@string/close_button" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/result_loader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="@string/loader_right"
+                app:lottie_loop="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

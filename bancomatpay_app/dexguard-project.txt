@@ -1,0 +1,150 @@
+# DexGuard's default settings are fine for this sample application.
+-dontshrink
+-dontoptimize
+#-dontobfuscate
+
+# Display some more statistics about the processed code.
+-verbose
+
+# The optimization step can remove specified logging calls.
+# The shrinking step can then also remove the logging classes.
+
+# Remove Android logging calls (in this case, including errors).
+-assumenosideeffects class android.util.Log {
+    public static boolean isLoggable(java.lang.String, int);
+    public static int v(...);
+    public static int d(...);
+    public static int i(...);
+    public static int w(...);
+    public static int e(...);
+    public static java.lang.String getStackTraceString(java.lang.Throwable);
+}
+
+# Remove Java logging calls.
+-assumenosideeffects class java.util.logging.Logger {
+    public static java.util.logging.Logger getLogger(...);
+    public boolean isLoggable(java.util.logging.Level);
+    public void entering(...);
+    public void exiting(...);
+    public void finest(...);
+    public void finer(...);
+    public void fine(...);
+    public void config(...);
+    public void info(...);
+    public void warning(...);
+    public void severe(...);
+}
+
+# Remove Apache Commons logging calls.
+-assumenosideeffects class org.apache.commons.logging.Log {
+    public boolean is*Enabled();
+    public void trace(...);
+    public void debug(...);
+    public void info(...);
+    public void warn(...);
+    public void error(...);
+    public void fatal(...);
+}
+
+# Remove Apache Log4j logging calls.
+-assumenosideeffects class org.apache.log4j.Logger {
+  public static org.apache.log4j.Category getRoot();
+  public static java.util.Enumeration getCurrentCategories();
+  public static org.apache.log4j.Category getInstance(java.lang.Class);
+  public static org.apache.log4j.Category getInstance(java.lang.String);
+  public static org.apache.log4j.Logger exists(java.lang.String);
+  public static org.apache.log4j.Logger getLogger(java.lang.Class);
+  public static org.apache.log4j.Logger getLogger(java.lang.String);
+  public static org.apache.log4j.Logger getLogger(java.lang.String, org.apache.log4j.spi.LoggerFactory);
+  public static org.apache.log4j.Logger getRootLogger();
+  public static org.apache.log4j.spi.LoggerRepository getDefaultHierarchy();
+  public boolean getAdditivity();
+  public boolean isAttached(org.apache.log4j.Appender);
+  public boolean isDebugEnabled();
+  public boolean isEnabledFor(org.apache.log4j.Priority);
+  public boolean isInfoEnabled();
+  public boolean isTraceEnabled();
+  public java.lang.String getName();
+  public java.util.Enumeration getAllAppenders();
+  public java.util.ResourceBundle getResourceBundle();
+  public org.apache.log4j.Appender getAppender(java.lang.String);
+  public org.apache.log4j.Category getParent();
+  public org.apache.log4j.Level getEffectiveLevel();
+  public org.apache.log4j.Level getLevel();
+  public org.apache.log4j.Level getPriority();
+  public org.apache.log4j.Priority getChainedPriority();
+  public org.apache.log4j.spi.LoggerRepository getHierarchy();
+  public org.apache.log4j.spi.LoggerRepository getLoggerRepository();
+  public void debug(java.lang.Object);
+  public void debug(java.lang.Object, java.lang.Throwable);
+  public void error(java.lang.Object);
+  public void error(java.lang.Object, java.lang.Throwable);
+  public void fatal(java.lang.Object);
+  public void fatal(java.lang.Object, java.lang.Throwable);
+  public void info(java.lang.Object);
+  public void info(java.lang.Object, java.lang.Throwable);
+  public void l7dlog(org.apache.log4j.Priority, java.lang.String, java.lang.Object[], java.lang.Throwable);
+  public void l7dlog(org.apache.log4j.Priority, java.lang.String, java.lang.Throwable);
+  public void log(java.lang.String, org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable);
+  public void log(org.apache.log4j.Priority, java.lang.Object);
+  public void log(org.apache.log4j.Priority, java.lang.Object, java.lang.Throwable);
+  public void trace(java.lang.Object);
+  public void trace(java.lang.Object, java.lang.Throwable);
+  public void warn(java.lang.Object);
+  public void warn(java.lang.Object, java.lang.Throwable);
+}
+
+# Configurazione Firebase Crashlytics
+-keepattributes *Annotation*
+-keepattributes SourceFile,LineNumberTable
+
+-keep class com.crashlytics.** { *; }
+-dontwarn com.crashlytics.**
+-keep public class * extends java.lang.Exception
+
+# Istruzione obbligatoria multidex
+#-multidex
+
+# Offuscamento. Nel caso stringa tutorial testata: -obfuscatecode,high class  eu.sia.jiffy.consumer.access.*
+-keep class it.bancomatpay.sdk.manager.network.dto.** { *; }
+-keep class it.bancomatpay.sdk.manager.storage.model.** { *; }
+-keep class it.bancomat.pay.consumer.storage.model.** { *; }
+-keep class it.bancomat.pay.consumer.activation.databank.** { *; }
+-keep class it.bancomatpay.sdkui.prefixphonenumber.** { *; }
+-keep class it.bancomatpay.sdkui.config.** { *; }
+-keep class it.bancomatpay.sdk.manager.task.model.** { *; }
+-keep class it.bancomat.pay.consumer.network.dto.** { *; }
+-keep class it.bancomat.pay.eventbus.** { *; }
+
+-keepclassmembers class * {
+    @org.greenrobot.eventbus.Subscribe <methods>;
+}
+-keep enum org.greenrobot.eventbus.ThreadMode { *; }
+
+-dontwarn com.squareup.okhttp3.**
+-keep class com.squareup.okhttp3.* { *;}
+-dontwarn okio.
+
+-keep public class com.android.installreferrer.** { *; }
+
+-keep class com.huawei.hianalytics.** {*;}
+-dontwarn com.huawei.hianalytics.**
+-keep class com.huawei.updatesdk.** {*;}
+-dontwarn com.huawei.updatesdk.**
+-keep class com.huawei.hms.** {*;}
+-dontwarn com.huawei.hms.**
+
+#Rimozione Offuscamento immagini
+-keepresources drawable/*
+
+#Rimozione Offuscamento stringhe/json
+-keepresources string/**
+
+
+#Enabling Runtime Application Self Protection tools
+-raspchecks apptamper, hook
+-raspcontinueon !hook
+
+-encryptstrings class it.bancomatpay.sdk.manager.utilities.Constants {
+    public static final java.lang.String PRIVATE_KEY_DEFAULT;
+}
