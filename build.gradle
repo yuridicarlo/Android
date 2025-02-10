@@ -1,0 +1,70 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    File signFile = rootProject.file('bancomat.properties')
+    Properties p = new Properties()
+    p.load(new FileInputStream(signFile))
+    File directoriesFile = rootProject.file('bancomat-directories.properties')
+    Properties pDirectories = new Properties()
+    pDirectories.load(new FileInputStream(directoriesFile))
+
+    repositories {
+        google()
+        mavenCentral()
+
+        if (p.enableDexguard == 'true') {
+            /*flatDir { dirs p.dexGuardPath }*/
+            maven {
+                url pDirectories.dexGuardMavenUrl
+            }
+        }
+
+        maven {url 'https://developer.huawei.com/repo/'}
+        maven {url 'https://maven.scijava.org/content/repositories/public/'}
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        if (p.enableDexguard == 'true') {
+            classpath 'com.guardsquare:dexguard-gradle-plugin:+'
+        }
+        classpath 'com.google.gms:google-services:4.3.15'
+        classpath 'com.huawei.agconnect:agcp:1.6.5.300'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.8'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.7.1"
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+plugins {
+  id "org.sonarqube" version "6.0.1.5171"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "yuridicarlo_Android"
+    property "sonar.organization", "yuridicarlo"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+
+        maven {url 'https://developer.huawei.com/repo/'}
+        maven {url 'https://maven.scijava.org/content/repositories/public/'}
+
+        flatDir {
+            dirs '../bancomatpay_sdk_core/libs'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
