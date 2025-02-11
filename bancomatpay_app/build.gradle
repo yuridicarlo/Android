@@ -18,6 +18,7 @@ if (p.enableDexguard == 'true') {
 android {
     compileSdkVersion 34
     buildToolsVersion '30.0.3'
+    namespace "it.bancomatpay.consumer"
 
     defaultConfig {
         applicationId "it.bancomat.pay.user"
