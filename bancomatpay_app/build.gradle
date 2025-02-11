@@ -22,11 +22,15 @@ android {
     defaultConfig {
         applicationId "it.bancomat.pay.user"
         minSdkVersion 24
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode p.appBuildVersion.toInteger()
         versionName p.appNameVersion
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    lint {
+          baseline = file("lint-baseline.xml")
     }
 
     lintOptions {
