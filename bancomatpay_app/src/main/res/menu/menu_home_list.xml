@@ -21,7 +21,7 @@
             android:id="@+id/menu_home_settings"
             android:title="@string/menu_voice_3"
             app:showAsAction="never" />
-    </group>m
+    </group>
 
     <group>
         <item

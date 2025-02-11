@@ -1,5 +1,16 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.runtimes": [
+		{
+		  "name": "JavaSE-11",
+		  "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.22.7-hotspot",
+		},
+		{
+		  "name": "JavaSE-17",
+		  "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.11.9-hotspot",
+		  "default": true
+		}
+	]
+	"java.configuration.updateBuildConfiguration": "interactive",
     "sonarlint.connectedMode.project": {
         "connectionId": "yuridicarlo",
         "projectKey": "yuridicarlo_Android"

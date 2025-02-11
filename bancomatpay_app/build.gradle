@@ -22,7 +22,7 @@ android {
     defaultConfig {
         applicationId "it.bancomat.pay.user"
         minSdkVersion 24
-        targetSdkVersion 34
+        targetSdkVersion 30
         versionCode p.appBuildVersion.toInteger()
         versionName p.appNameVersion
 
@@ -200,3 +200,13 @@ dependencies {
 }
 
 apply plugin: 'com.huawei.agconnect'
+
+/* task transformClassesWithAPMSPluginForDevelopDebug {
+    inputs.files("src").withPathSensitivity(PathSensitivity.RELATIVE)
+    outputs.dir("build/output")
+
+    doLast {
+        println "Eseguendo trasformazione con nuove API..."
+    }
+}
+ */

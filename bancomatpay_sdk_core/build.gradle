@@ -45,6 +45,7 @@ android {
 }
 
 dependencies {
+
     api fileTree(dir: 'libs', include: ['*.jar'])
     api(name:'dexguard-runtime', ext:'aar')
 
